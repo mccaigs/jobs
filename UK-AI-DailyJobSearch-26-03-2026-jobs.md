@@ -4,7 +4,7 @@
 >
 > **CV Match Note:** Roles assessed against David Robertson's profile — AI systems builder specialising in LLM integration, agentic AI, workflow automation, structured output pipelines, SaaS product AI features, Node.js/Python/TypeScript, VPS/Linux production deployment. Preferred: contract, remote or Edinburgh-based.
 >
-> **Sources Searched:** OutsideSpy, CWJobs, Totaljobs, Reed, Jobsite, CV-Library, Nigel Frank, QualityContracts, ArtificialIntelligenceJobs.co.uk, Morson Talent, Glassdoor, LinkedIn UK, Indeed UK, remote-jobs.com, Dice.com, n8n Community, Wellfound
+> **Sources Searched:** OutsideSpy, CWJobs, Totaljobs, Reed, Jobsite, CV-Library, Nigel Frank, QualityContracts, ArtificialIntelligenceJobs.co.uk, Morson Talent, Glassdoor, LinkedIn UK, Indeed UK, remote-jobs.com, Dice.com, n8n Community, Wellfound, Exalto Consulting, SecurityClearedJobs, aijobs.net, Amplience Careers
 >
 > **Access Note:** Most job boards blocked direct fetch (403). All listings below were confirmed via web search indexing and aggregator cross-referencing. Date filters applied where supported.
 
@@ -223,7 +223,72 @@
 
 ---
 
-### 17. Staff Data Scientist — Supply Chain Forecasting
+### 17. AI Engineer — Capital Markets / Investment Bank
+**Company:** Global Investment Bank (via CipherTek Recruitment)
+**Location:** London — Hybrid (1–2 days on-site)
+**Day Rate:** £700–£1,200/day
+**Duration:** 12 months
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Hybrid (1–2 days on-site London)
+**Link:** [contracts.outsidespy.co.uk/job/341467](https://contracts.outsidespy.co.uk/job/341467/artificial-intelligence-engineer-at-ciphertek-recruitment-london-700-1-200-per-day/)
+
+**CV Match:** Exceptional rate — highest in today's search at £700–£1,200/day; LLM integration and large-scale distributed systems for a capital markets platform; 1–2 days London onsite is manageable. Verify if security clearance is required.
+
+---
+
+### 18. Senior AI Engineer — LangChain / LangGraph / Claude Agents SDK
+**Company:** Undisclosed (via Cititec)
+**Location:** London — Hybrid (3 days on-site)
+**Day Rate:** £600/day
+**Duration:** 6 months
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Hybrid (3 days on-site London)
+**Link:** [contracts.outsidespy.co.uk/job/341085](https://contracts.outsidespy.co.uk/job/341085/artificial-intelligence-engineer-at-cititec-london-area-600-per-day/)
+
+**CV Match:** Technically excellent — LangGraph, LangChain, Claude Agents SDK, multi-agent orchestration, and production LLM workflows are David's exact stack; 3 days on-site London is at the maximum acceptable threshold.
+
+---
+
+### 19. Senior Full Stack AI Engineer — LLM (100% Remote)
+**Company:** Undisclosed (via Exalto Consulting)
+**Location:** Fully Remote (UK)
+**Day Rate:** Competitive (6-month initial, likely to extend)
+**Duration:** 6 months+
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Fully Remote
+**Link:** [exalto-consulting.com/job/senior-full-stack-ai-engineer-llm-remote-outside-ir35](https://exalto-consulting.com/job/senior-full-stack-ai-engineer-llm-remote-outside-ir35)
+
+**CV Match:** Very strong — Python, TypeScript, AWS CDK, applied ML, NLP, generative AI, LLM-based systems, and agent architecture; 100% remote outside IR35 is ideal.
+
+---
+
+### 20. AI/LLM Engineer Architect — RAG / Agentic / MCP
+**Company:** Undisclosed (AWS-based product, via Robson Bale Limited)
+**Location:** London (mostly remote)
+**Day Rate:** Competitive (not stated)
+**Duration:** Not stated
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Mostly Remote (occasional London travel)
+**Link:** [remote-jobs.com/job/9988330](https://remote-jobs.com/job/9988330/ai-llm-engineer-contract-rag-implementation-london-mostly-remote-outside-ir35-jan-start/)
+
+**CV Match:** Very strong — RAG in production, agentic development, LLM system design, MCP (Model Context Protocol), MLOps, and AWS; MCP experience is a direct match for David's agentic tooling work. Verify this listing is still open (originally January start).
+
+---
+
+### 21. AI Engineer — Agentic AI / LLM (Experis)
+**Company:** Undisclosed (via Experis)
+**Location:** London — Hybrid (2 days on-site)
+**Day Rate:** Up to £450/day
+**Duration:** Not stated
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Hybrid (2 days on-site London)
+**Link:** [contracts.outsidespy.co.uk/job/339276](https://contracts.outsidespy.co.uk/job/339276/ai-engineer-agentic-ai-python-pycharm-llm-agentic-at-experis-london-contract-rate/)
+
+**CV Match:** Strong — agentic AI, LLM, NLP, GenAI pipelines, cloud ML platforms, and vector-based retrieval; 2 days on-site London is within the hybrid threshold.
+
+---
+
+### 22. Staff Data Scientist — Supply Chain Forecasting
 **Company:** Global consumer business (via Oliver Bernard)
 **Location:** Remote-first (UK)
 **Day Rate:** Up to £850/day
@@ -298,15 +363,19 @@
 
 | Role | Day Rate | IR35 | Remote |
 |---|---|---|---|
+| AI Engineer — Capital Markets (CipherTek) | £700–£1,200/day | **Outside IR35** | Hybrid (1–2d London) |
 | Staff Data Scientist (Supply Chain) | £850/day | **Outside IR35** | Remote-first |
 | Full-Stack AI Engineer (Energy/CTO) | £800/day | TBC | Remote/London |
 | AI Architect (Edinburgh Public Sector) | Est. £750–£900/day | **Outside IR35** | Edinburgh Hybrid |
 | Senior Python Engineer (AI Scale-Up) | £700/day | **Outside IR35** | Fully Remote |
+| Senior AI Engineer – LangChain/LangGraph (Cititec) | £600/day | **Outside IR35** | Hybrid (3d London) |
+| ML Engineer – LLM & GCP | £600/day | **Outside IR35** | Fully Remote |
 | AI Consultant (Azure ML/GenAI) | £650–£800/day | **Outside IR35** | Fully Remote |
-| AI Engineer (Asset Mgmt, ChatGPT Enterprise) | £650/day | **Outside IR35** | London Hybrid |
 | AI Engineer — Central Government | £480–£520/day | **Outside IR35** | Fully Remote |
 | n8n Technical Platform Manager | £550/day | **Outside IR35** | Fully Remote |
+| AI Engineer – Agentic AI (Experis) | £450/day | **Outside IR35** | Hybrid (2d London) |
 | Agentic AI Consultant (Part-Time) | £400–£450/day | **Outside IR35** | Fully Remote |
+| AI Python Developer – LLM (The Bridge/Morson) | £400–£405/day | **Outside IR35** | Fully Remote |
 | AI Automation Developer (WealthTech) | £350/day | **Outside IR35** | Fully Remote |
 
 ---
