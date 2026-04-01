@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* App surface tokens */
+  --color-surface: #0c0a09;
+  --color-surface_container: #1a1816;
+  --color-surface_container_low: #141210;
+  --color-surface_container_lowest: #0a0908;
+  --color-surface_container_high: #242220;
+  --color-surface_container_highest: #2e2b28;
+  --color-surface_elevated: #332f2c;
+
+  /* Amber/gold accent */
+  --color-primary: #d4a574;
+  --color-primary_hover: #e6b887;
+  --color-primary_container: #b8935f;
+  --color-primary_dim: #a67f52;
+
+  /* Supporting */
+  --color-secondary: #8b7355;
+  --color-secondary_container: #3d3935;
+  --color-tertiary: #93d2d1;
+  --color-success: #7fb069;
+  --color-warning: #e6b887;
+  --color-error: #d16666;
+
+  /* Text */
+  --color-on_surface: #f5f1ed;
+  --color-on_surface_variant: #ccc5be;
+  --color-on_surface_dim: #9a938c;
+  --color-outline_variant: #524438;
+
+  /* Stone palette (used by Stitch components) */
+  --color-stone-50:  #fafaf9;
+  --color-stone-100: #f5f5f4;
+  --color-stone-200: #e7e5e4;
+  --color-stone-300: #d6d3d1;
+  --color-stone-400: #a8a29e;
+  --color-stone-500: #78716c;
+  --color-stone-600: #57534e;
+  --color-stone-700: #44403c;
+  --color-stone-800: #292524;
+  --color-stone-900: #1c1917;
+  --color-stone-950: #0c0a09;
+
+  /* Typography */
+  --font-newsreader: 'Newsreader', Georgia, serif;
+  --font-manrope: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-headline: 'Newsreader', Georgia, serif;
+  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-label: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-on_surface);
+    font-family: var(--font-manrope);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-newsreader);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary_container));
+  }
+  
+  .gradient-primary-subtle {
+    background: linear-gradient(135deg, 
+      color-mix(in srgb, var(--color-primary) 15%, transparent),
+      color-mix(in srgb, var(--color-primary_container) 8%, transparent)
+    );
+  }
+
+  .glass {
+    background: color-mix(in srgb, var(--color-surface_container) 70%, transparent);
+    backdrop-filter: blur(24px);
+  }
+
+  .card-elevated {
+    background: var(--color-surface_container_high);
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .card-premium {
+    background: var(--color-surface_elevated);
+    border-radius: 1.25rem;
+    box-shadow: 
+      0 2px 8px -2px rgba(0, 0, 0, 0.4),
+      0 0 0 1px color-mix(in srgb, var(--color-on_surface) 5%, transparent);
+  }
+
+  .ambient-shadow {
+    box-shadow: 0 0 32px 0 color-mix(in srgb, var(--color-on_surface) 8%, transparent);
+  }
+  
+  .text-shadow-soft {
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .transition-smooth {
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-colors-smooth {
+    transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease;
+  }
+  
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-surface_container_highest) var(--color-surface_container);
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: var(--color-surface_container);
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--color-surface_container_highest);
+    border-radius: 4px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: var(--color-surface_elevated);
+  }
+}

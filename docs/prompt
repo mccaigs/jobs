@@ -1,0 +1,491 @@
+You are building a production-quality frontend for a live AI system.
+
+This is NOT a generic dashboard.
+This is NOT a standard SaaS UI.
+This is a premium, editorial-style interface for an autonomous AI job intelligence system.
+
+The result should feel like a high-end architectural journal, not a web app.
+
+---
+
+PROJECT CONTEXT
+
+This site sits inside the SAME repository as markdown job reports.
+
+Repo contains:
+- markdown files (daily AI job reports)
+- this new frontend (in /site)
+
+This is a presentation layer for a system that:
+- runs twice daily
+- scans the UK job market
+- filters and ranks AI roles
+- outputs structured reports
+
+The UI must make that system feel real, calm, and intentional.
+
+---
+
+TECH STACK
+
+Use:
+
+- Vite
+- React
+- TypeScript
+- Tailwind CSS
+- @vitejs/plugin-react
+- @mdx-js/rollup (or markdown equivalent)
+- react-router-dom
+- import.meta.glob() for loading local markdown
+
+DO NOT:
+- fetch from GitHub
+- add a backend
+- add auth
+- over-engineer
+
+This is a static, content-driven system.
+
+---
+
+PROJECT STRUCTURE
+
+Assume:
+
+/reports
+  *.md (job reports)
+
+ /site
+   (Vite app)
+
+Load markdown using:
+
+import.meta.glob('../../reports/*.md', { as: 'raw', eager: true })
+
+Build a parser that:
+- extracts date
+- detects report type (daily vs UK)
+- sorts newest first
+- generates clean titles
+
+---
+
+LAYOUT (CRITICAL)
+
+Recreate the layout style of the CareersAI dashboard screenshot.
+
+3 columns:
+
+LEFT = Report Rail  
+MIDDLE = Report Viewer  
+RIGHT = Context / System / Profile  
+
+This must feel editorial, not like a file explorer.
+
+---
+
+LEFT COLUMN — “Insight Rail”
+
+- vertical list of reports
+- grouped:
+  - Daily Targeted
+  - UK Wide
+- show:
+  - date
+  - title
+  - optional “Latest”
+- active item highlighted with tonal shift
+- scrollable
+- should feel like an intelligence archive, not a menu
+
+---
+
+MIDDLE COLUMN — “Report Surface”
+
+- render markdown beautifully
+- strong editorial typography
+- include top header:
+  - report title
+  - date
+  - type
+  - GitHub link
+
+support:
+- headings
+- lists
+- tables
+- links
+- blockquotes
+
+tables must be readable on dark surfaces
+
+NO default markdown styling
+
+---
+
+RIGHT COLUMN — “System Context”
+
+Stacked cards:
+
+1. ABOUT ME  
+David Robertson  
+AI Engineer / AI Systems Architect  
+
+Short bio:
+AI systems builder focused on workflow automation, agentic execution, and production AI systems that do real work.
+
+2. SYSTEM  
+AI Job Intelligence System  
+
+Copy:
+Something is happening here. But it is not random.
+
+This is an autonomous system that runs twice a day, scanning the UK job market for AI roles, filtering signal from noise, and turning it into something actionable.
+
+3. LIVE FACTS  
+- total reports
+- latest update
+- repo link
+
+4. WHY THIS EXISTS  
+Manual job searching is slow, noisy, and reactive.  
+This system makes it fast, focused, and actionable.
+
+---
+
+DESIGN SYSTEM — STRICT
+
+Follow this exactly.
+
+---
+
+CREATIVE DIRECTION
+
+“The Digital Curator”
+
+- calm
+- structured
+- editorial
+- premium
+- quiet authority
+
+NO generic SaaS feel.
+
+Use intentional asymmetry where appropriate.
+
+---
+
+COLOURS
+
+Base:
+#161311 (surface)
+#221f1d (container)
+#2d2927 (cards)
+#383431 (active)
+
+Accent:
+#ffb86c → #c8863a gradient
+
+Text:
+#e9e1dd
+
+NO pure black
+NO pure white
+
+---
+
+NO-LINE RULE
+
+Do NOT use borders.
+
+Use:
+- tonal shifts
+- spacing
+- layering
+
+If required:
+very faint ghost border only
+
+---
+
+DEPTH
+
+Use layering instead of shadows.
+
+Only use shadows if:
+- very soft
+- large blur
+- warm tone
+
+---
+
+TYPOGRAPHY
+
+Use:
+
+- Newsreader → headlines
+- Manrope → UI + body
+
+Rules:
+- large editorial headings
+- strong hierarchy
+- spacing over density
+
+---
+
+COMPONENT STYLE
+
+Cards:
+- soft surfaces
+- no borders
+- rounded
+- layered tones
+
+Buttons:
+- gradient amber
+- uppercase
+- slight tracking
+
+Lists:
+- NO dividers
+- spacing only
+
+---
+
+ANIMATION
+
+- slow (300ms)
+- smooth
+- no bounce
+- no flashy motion
+
+---
+
+ROUTING
+
+- / → latest report
+- /report/:slug → specific report
+
+---
+
+RESPONSIVE
+
+- left rail collapses on mobile
+- middle stays primary
+- right stacks below
+
+---
+
+COMPONENTS
+
+Build:
+
+- AppShell
+- ReportsRail
+- ReportItem
+- ReportViewer
+- MarkdownRenderer
+- RightRail
+- ProfileCard
+- SystemCard
+- StatsCard
+
+---
+
+OUTPUT
+
+1. Full Vite app scaffold
+2. Layout implemented
+3. Markdown rendering working
+4. Local reports loaded
+5. Styled with design system
+6. Runs locally
+7. Ready for Vercel deploy
+
+---
+
+IMPORTANT
+
+This is not a UI exercise.
+
+This is a SYSTEM PRESENTATION.
+
+When someone lands on this:
+they should think:
+
+"This is different. This is built properly."
+
+Build a Vite + React + TypeScript + Tailwind + MDX application inside /site.
+
+Use the documents in /docs as the source of truth:
+- design.md → visual system (STRICT)
+- PDR.md → product requirements (STRICT)
+
+Do not reinterpret them.
+Implement them.
+
+---
+
+PROJECT STRUCTURE
+
+Create:
+
+/site
+  /src
+  index.html
+  vite.config.ts
+  package.json
+
+Assume markdown reports exist in:
+
+/reports
+
+Load them using:
+
+import.meta.glob('../reports/*.md', { as: 'raw', eager: true })
+
+---
+
+CORE REQUIREMENTS
+
+1. 3-column layout:
+
+LEFT: Report Rail  
+MIDDLE: Report Viewer  
+RIGHT: Context / Profile / System  
+
+2. Load reports dynamically from /reports
+
+3. Parse:
+- date
+- report type (daily vs UK)
+- title
+
+4. Sort newest first
+
+5. Default route loads latest report
+
+6. Add routing:
+- /
+- /report/:slug
+
+---
+
+LEFT COLUMN
+
+- list reports
+- grouped (Daily / UK)
+- highlight active
+- scrollable
+- feels like an editorial archive, not a file explorer
+
+---
+
+MIDDLE COLUMN
+
+- render markdown with custom components
+- no default markdown styling
+
+Support:
+- headings
+- lists
+- tables
+- links
+- blockquotes
+
+Add header:
+- title
+- date
+- type
+- GitHub link
+
+---
+
+RIGHT COLUMN
+
+Build 4 cards:
+
+1. ABOUT ME  
+David Robertson  
+AI Engineer / AI Systems Architect  
+
+2. SYSTEM  
+AI Job Intelligence System  
+
+Copy:
+Something is happening here. But it is not random.
+
+This is an autonomous system that runs twice a day, scanning the UK job market for AI roles, filtering signal from noise, and turning it into something actionable.
+
+3. LIVE FACTS  
+- report count
+- latest update
+- repo link
+
+4. WHY THIS EXISTS  
+Manual job searching is slow, noisy, and reactive.  
+This system makes it fast, focused, and actionable.
+
+---
+
+DESIGN SYSTEM
+
+STRICTLY follow /docs/design.md
+
+Key rules:
+
+- NO borders
+- Use tonal layering only
+- Use warm dark palette
+- Use Newsreader for headings
+- Use Manrope for UI
+- Use spacing instead of lines
+- Use subtle gradients for primary actions
+- No generic Tailwind styling
+
+This must feel editorial and premium.
+
+---
+
+COMPONENTS
+
+Create:
+
+- AppShell
+- ReportsRail
+- ReportItem
+- ReportViewer
+- MarkdownRenderer
+- RightRail
+- ProfileCard
+- SystemCard
+- StatsCard
+
+---
+
+RESPONSIVE
+
+- left collapses on mobile
+- right stacks below
+- middle stays primary
+
+---
+
+OUTPUT
+
+- working Vite app
+- markdown rendering working
+- layout implemented
+- design system applied
+- ready to run with npm run dev
+
+---
+
+IMPORTANT
+
+This is not a UI.
+
+This is a SYSTEM.
+
+The output must feel calm, intentional, and high-end.
