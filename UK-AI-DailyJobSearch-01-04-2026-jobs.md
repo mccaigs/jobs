@@ -4,7 +4,7 @@
 >
 > **CV Match Note:** Roles assessed against David Robertson's profile — AI systems builder specialising in LLM integration, agentic AI, workflow automation, structured output pipelines, SaaS product AI features, Python, TypeScript, Node.js, FastAPI, AWS, MCP (Model Context Protocol), VPS/Linux production deployment. Preferred: contract, remote or Edinburgh-based.
 >
-> **Sources Searched:** OutsideSpy (contracts.outsidespy.co.uk), QualityContracts, Reed, CWJobs, ArtificialIntelligenceJobs.co.uk, Morson Edge, Intec Select, Edison Smart, Gigged.AI, Urban Connect, Maxwell Bond, Akkodis, The Bridge IT, Jobsite, Transparent Technology, SecurityClearedJobs, Wellfound, LinkedIn Jobs UK, Hexwired, remote-jobs.com, Lily Lifestyle Jobs, TechNET IT
+> **Sources Searched:** OutsideSpy (contracts.outsidespy.co.uk), QualityContracts, Reed, CWJobs, ArtificialIntelligenceJobs.co.uk, Morson Edge, Intec Select, Edison Smart, Gigged.AI, Urban Connect, Maxwell Bond, Akkodis, Cititec, The Bridge IT, Jobsite, Transparent Technology, SecurityClearedJobs, Wellfound, LinkedIn Jobs UK, Hexwired, remote-jobs.com, Lily Lifestyle Jobs, TechNET IT, outsideir35.org.uk, Involved Solutions, machinelearningjobs.co.uk, ContractSpy, TotalJobs, CV-Library, aijobs.net, Nigel Frank International, Method Resourcing
 >
 > **Access Note:** Several job boards (LinkedIn, Indeed, Hays, Harvey Nash) return 403 or do not expose full listings via search indexing. All listings confirmed via aggregator cross-referencing and direct agency sites. Recency notes applied where post dates could be confirmed.
 
@@ -157,6 +157,97 @@
 
 ---
 
+### 12. AI Engineer — Claude Agents SDK / LangGraph / RAG (Cititec) **[NEW TODAY / PRIORITY]**
+**Company:** Undisclosed (via Cititec)
+**Location:** London Area — Hybrid (mostly remote)
+**Day Rate:** £600/day
+**Duration:** 6 months
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Hybrid (mostly remote, London)
+**Link:** [contracts.outsidespy.co.uk/job/341085](https://contracts.outsidespy.co.uk/job/341085/artificial-intelligence-engineer-at-cititec-london-area-600-per-day/) | [cititec.com](https://cititec.com/job/ai-engineer-8299/)
+
+**CV Match:** Explicitly lists Claude Agents SDK, LangChain, LangGraph, RAG pipelines, vector/knowledge databases, Python, and multi-agent orchestration — this is a near-complete match for David's documented stack; the Claude Agents SDK requirement is a direct differentiator in David's favour; £600/day rate is strong.
+
+---
+
+### 13. Agentic AI Engineer — Edinburgh or London (Reed) **[NEW TODAY / PRIORITY]**
+**Company:** Undisclosed (via Reed)
+**Location:** Edinburgh or London — Hybrid
+**Day Rate:** Competitive (umbrella — verify IR35 directly)
+**Duration:** 6 months initial
+**IR35 Status:** IR35 Status: TBC (umbrella arrangement — confirm before applying)
+**Remote Status:** Hybrid (Edinburgh or London base)
+**Link:** [reed.co.uk — Agentic AI Engineer](https://www.reed.co.uk/jobs/agentic-ai-engineer-jobs-in-london?jobId=55179199)
+
+**CV Match:** Python/Node.js, AWS RAG Pipelines, CrewAI, LangGraph, Agentic AI, embedded models — strong technical match; Edinburgh base is a significant positive for David's location preference; verify IR35 status directly before applying.
+
+---
+
+### 14. AI/ML Engineer — Contract Remote (Ember Software) **[NEW TODAY]**
+**Company:** Ember Software
+**Location:** Fully Remote (UK)
+**Day Rate:** £600/day
+**Duration:** Not stated
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Fully Remote
+**Link:** [LinkedIn — AI/ML Engineer Contract Remote £600/day (Ember Software)](https://uk.linkedin.com/jobs/view/ai-ml-engineer-contract-%E2%80%93-remote-%E2%80%93-%C2%A3600-per-day-%E2%80%93-outside-ir35-at-ember-software-4334288560)
+
+**CV Match:** Full-stack AI/ML engineering at £600/day, fully remote, outside IR35 — strong rate and flexibility; skills detail not fully surfaced but the rate and remote/IR35 combination make this worth direct investigation.
+
+---
+
+### 15. Contract ML Engineer — NLP / LLM (Occasional Cambridge) **[NEW TODAY]**
+**Company:** Undisclosed (via LinkedIn)
+**Location:** Fully Remote (occasional Cambridge travel)
+**Day Rate:** £550–£650/day
+**Duration:** 6 months initial (strong extension potential)
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Fully Remote (occasional Cambridge)
+**Link:** [LinkedIn — Machine Learning Engineer Contract Jobs London](https://uk.linkedin.com/jobs/machine-learning-engineer-contract-jobs-london)
+
+**CV Match:** Python, Hugging Face, LangChain, PyTorch, Docker, Kubernetes, MLflow, Vertex AI/AWS SageMaker, transformer models, RAG — substantial overlap with David's LLM and production deployment stack; £550–£650/day is within target range.
+
+---
+
+### 16. AI/ML Engineer — NLP / LLM (Involved Solutions) **[NEW TODAY]**
+**Company:** Undisclosed (via Involved Solutions)
+**Location:** Fully Remote (UK, occasional ad-hoc commitments)
+**Day Rate:** Up to £500/day
+**Duration:** 6 months
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Fully Remote
+**Link:** [involvedsolutions.com — AI ML Engineer NLP LLM](https://www.involvedsolutions.com/jobs/5291-AI-Machine-Learning-Engineer-NLP-LLM---Contract/)
+
+**CV Match:** NLP and LLM engineering fully remote over 6 months — direct LLM skills match; rate is at lower end of target but fully remote and clean IR35 status; worth a direct application given skills alignment.
+
+---
+
+### 17. AI Fullstack Engineer — Pharmaceutical (TypeScript / FastAPI / React) **[NEW TODAY / PRIORITY]**
+**Company:** Major Pharmaceutical (via CWJobs)
+**Location:** Fully Remote (UK)
+**Day Rate:** Not published (TBC)
+**Duration:** Long-term
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Fully Remote
+**Link:** [cwjobs.co.uk — Outside IR35 Jobs](https://www.cwjobs.co.uk/jobs/outside)
+
+**CV Match:** Agentic AI, TypeScript, React, Python, FastAPI — this is David's exact stack; fully remote and outside IR35 in a major pharma context; rate not published but the role specification is an almost exact fit for his documented skills.
+
+---
+
+### 18. Machine Learning Engineer — GCP / LLM (Method Resourcing) **[NEW TODAY]**
+**Company:** Undisclosed (via Method Resourcing / TotalJobs)
+**Location:** Remote (UK)
+**Day Rate:** £600/day
+**Duration:** 6 months minimum | Start: Early April 2026
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Fully Remote
+**Link:** [totaljobs.com — Contract ML Engineer GCP £600](https://www.totaljobs.com/job/contract-machine-learning-engineer-gcp-6-months-600/method-resourcing-job106747497)
+
+**CV Match:** Vertex AI, BigQuery, Cloud Functions/Cloud Run, Python, MLOps (CI/CD, monitoring, retraining, model governance) — David's cloud and production ML deployment experience is directly transferable; GCP-native stack is adjacent to his AWS expertise; early April start aligns with availability.
+
+---
+
 ## CONTRACT ROLES — OUTSIDE IR35 — CARRIED FORWARD (Still Active, High Priority)
 
 The following roles were first surfaced in the 28–31 March searches and remain unactioned priority targets:
@@ -211,16 +302,23 @@ The following roles were first surfaced in the 28–31 March searches and remain
 | # | Role | Company | IR35 | Rate | Remote | ★ Match |
 |---|------|---------|------|------|--------|---------|
 | 1 | AI Engineer — Claude Code / Agentic AI **[NEW]** | Inara | **Outside IR35** | £450/day | Fully Remote | ⭐⭐⭐⭐⭐ |
-| 2 | Lead MLOps Engineer — Azure / MCP / LLMs **[NEW]** | QualityContracts | **Outside IR35** | TBC | Fully Remote | ⭐⭐⭐⭐⭐ |
-| 3 | AI/LLM Engineer/Architect — RAG / MCP **[NEW]** | Robson Bale Limited | **Outside IR35** | TBC | Mostly Remote | ⭐⭐⭐⭐⭐ |
-| 4 | Senior Python Engineer — AI Scale-Up **[NEW]** | Morson Edge | **Outside IR35** | £700/day | Fully Remote | ⭐⭐⭐⭐⭐ |
-| 5 | Data Scientist — LLM / AWS Bedrock (April start) **[NEW]** | Urban Connect | **Outside IR35** | £475/day | Fully Remote | ⭐⭐⭐⭐ |
-| 6 | AI Engineer — Manufacturing / ML **[NEW]** | Haystack | **Outside IR35** | £400–£600/day | Remote-First | ⭐⭐⭐⭐ |
-| 7 | Senior AI Engineer — ML Platform / MLOps **[NEW]** | QualityContracts | **Outside IR35** | £550–£600/day | Fully Remote | ⭐⭐⭐⭐ |
-| 8 | LLM Engineer — 12 months **[NEW]** | Undisclosed | **Outside IR35** | £500–£600/day | Fully Remote | ⭐⭐⭐⭐ |
-| 9 | AI Architect — UK Remote **[NEW]** | 9Nexus | **Outside IR35** | £400/day | Fully Remote | ⭐⭐⭐ |
-| 10 | AI Engineer — AI Foundry / Azure 12-month **[NEW]** | Stealth iT | **Outside IR35** | £450/day | Fully Remote | ⭐⭐⭐ |
-| 11 | AI Engineer — EdTech / LangChain / LangGraph **[NEW]** | Transparent Technology | **Outside IR35** | £350–£375/day | Fully Remote | ⭐⭐⭐ |
+| 2 | AI Engineer — Claude Agents SDK / LangGraph **[NEW]** | Cititec | **Outside IR35** | £600/day | Mostly Remote | ⭐⭐⭐⭐⭐ |
+| 3 | Lead MLOps Engineer — Azure / MCP / LLMs **[NEW]** | QualityContracts | **Outside IR35** | TBC | Fully Remote | ⭐⭐⭐⭐⭐ |
+| 4 | AI/LLM Engineer/Architect — RAG / MCP **[NEW]** | Robson Bale Limited | **Outside IR35** | TBC | Mostly Remote | ⭐⭐⭐⭐⭐ |
+| 5 | Senior Python Engineer — AI Scale-Up **[NEW]** | Morson Edge | **Outside IR35** | £700/day | Fully Remote | ⭐⭐⭐⭐⭐ |
+| 6 | AI Fullstack Engineer — Pharma (TypeScript/FastAPI) **[NEW]** | Major Pharma (CWJobs) | **Outside IR35** | TBC | Fully Remote | ⭐⭐⭐⭐⭐ |
+| 7 | Agentic AI Engineer — Edinburgh or London **[NEW]** | via Reed | TBC (umbrella) | Competitive | Hybrid (Edinburgh) | ⭐⭐⭐⭐⭐ |
+| 8 | Data Scientist — LLM / AWS Bedrock (April start) **[NEW]** | Urban Connect | **Outside IR35** | £475/day | Fully Remote | ⭐⭐⭐⭐ |
+| 9 | AI Engineer — Manufacturing / ML **[NEW]** | Haystack | **Outside IR35** | £400–£600/day | Remote-First | ⭐⭐⭐⭐ |
+| 10 | Senior AI Engineer — ML Platform / MLOps **[NEW]** | QualityContracts | **Outside IR35** | £550–£600/day | Fully Remote | ⭐⭐⭐⭐ |
+| 11 | AI/ML Engineer — Contract Remote **[NEW]** | Ember Software | **Outside IR35** | £600/day | Fully Remote | ⭐⭐⭐⭐ |
+| 12 | LLM Engineer — 12 months **[NEW]** | Undisclosed | **Outside IR35** | £500–£600/day | Fully Remote | ⭐⭐⭐⭐ |
+| 13 | Contract ML Engineer — NLP/LLM **[NEW]** | Undisclosed | **Outside IR35** | £550–£650/day | Fully Remote | ⭐⭐⭐⭐ |
+| 14 | ML Engineer — GCP / LLM (April start) **[NEW]** | Method Resourcing | **Outside IR35** | £600/day | Fully Remote | ⭐⭐⭐ |
+| 15 | AI Architect — UK Remote **[NEW]** | 9Nexus | **Outside IR35** | £400/day | Fully Remote | ⭐⭐⭐ |
+| 16 | AI Engineer — AI Foundry / Azure 12-month **[NEW]** | Stealth iT | **Outside IR35** | £450/day | Fully Remote | ⭐⭐⭐ |
+| 17 | AI/ML Engineer — NLP/LLM **[NEW]** | Involved Solutions | **Outside IR35** | Up to £500/day | Fully Remote | ⭐⭐⭐ |
+| 18 | AI Engineer — EdTech / LangChain / LangGraph **[NEW]** | Transparent Technology | **Outside IR35** | £350–£375/day | Fully Remote | ⭐⭐⭐ |
 
 ---
 
@@ -231,10 +329,17 @@ The following roles were first surfaced in the 28–31 March searches and remain
 | Data Scientist — LLM/AI/AWS Bedrock (Urban Connect, job/342171) | New job number post-31 March; April start by 13th; Bedrock + LLM chat moderation |
 | AI Engineer — Manufacturing (Haystack, job/341932) | New job ID; global manufacturing client; greenfield AI delivery |
 | AI Engineer — Claude Code / Agentic AI (Inara, job/341659) | New; operationalising AI using Claude Code — direct stack match |
+| AI Engineer — Claude Agents SDK / LangGraph / RAG (Cititec, job/341085) | New; Claude Agents SDK explicitly listed; £600/day; 6-month London hybrid |
 | Senior Python Engineer — AI Scale-Up (Morson Edge, job/341646) | New; £700/day; cloud-native event-driven Python at an AI scale-up |
 | Lead MLOps Engineer — Azure/MCP/LLMs (QualityContracts ID 1772937768) | New listing ID; MCP explicitly required — standout match |
 | Senior AI Engineer — ML Platform (QualityContracts ID 1771892621) | New listing ID; fully remote MLOps/platform engineering |
 | AI/LLM Engineer/Architect — RAG (Robson Bale Limited) | New; RAG + MCP + agentic + AWS; near-complete stack match |
+| Agentic AI Engineer — Edinburgh or London (Reed, job/55179199) | New; Edinburgh option is a key positive; CrewAI/LangGraph/RAG; verify IR35 |
+| AI/ML Engineer — Contract Remote (Ember Software, LinkedIn) | New; £600/day; fully remote; outside IR35 confirmed |
+| AI Fullstack Engineer — Pharma (CWJobs) | New; TypeScript/React/Python/FastAPI — David's exact stack; fully remote |
+| Contract ML Engineer — NLP/LLM (LinkedIn, occasional Cambridge) | New; £550–£650/day; Hugging Face/LangChain/RAG/AWS SageMaker |
+| AI/ML Engineer — NLP/LLM (Involved Solutions) | New; up to £500/day; 6-month fully remote |
+| ML Engineer — GCP/LLM (Method Resourcing, TotalJobs) | New; £600/day; April start; Vertex AI / MLOps |
 | LLM Engineer — 12-month fully remote (Lily Lifestyle Jobs) | New; £500–£600/day; 12-month duration adds stability |
 | AI Architect — UK Remote (9Nexus, LinkedIn) | New LinkedIn posting; fully remote, outside IR35 |
 
@@ -259,4 +364,5 @@ Visit these directly with "posted today" / "past 24 hours" filters applied:
 ---
 
 *Search conducted: 1 April 2026 | CV matched to: David Robertson — AI Engineer & Systems Architect*
-*Sources: OutsideSpy · QualityContracts · Reed · CWJobs · Morson Edge · Intec Select · Edison Smart · Gigged.AI · Urban Connect · Maxwell Bond · Akkodis · The Bridge IT · Transparent Technology · Robson Bale Limited · Hexwired Recruitment · SecurityClearedJobs · Wellfound · LinkedIn Jobs UK · 9Nexus · Stealth iT Consulting · TechNET IT · remote-jobs.com · Lily Lifestyle Jobs · ArtificialIntelligenceJobs.co.uk*
+*Total new roles identified today: 18 contract + additional permanents | Total including carried forward: 33+ active contract opportunities*
+*Sources: OutsideSpy · QualityContracts · Reed · CWJobs · Jobsite · TotalJobs · CV-Library · Morson Edge · Intec Select · Edison Smart · Cititec · Gigged.AI · Urban Connect · Maxwell Bond · Akkodis · The Bridge IT · Transparent Technology · Robson Bale Limited · Involved Solutions · Method Resourcing · Ember Software · Hexwired Recruitment · SecurityClearedJobs · Wellfound · LinkedIn Jobs UK · 9Nexus · Stealth iT Consulting · TechNET IT · outsideir35.org.uk · machinelearningjobs.co.uk · ContractSpy · aijobs.net · ArtificialIntelligenceJobs.co.uk · Nigel Frank International*
