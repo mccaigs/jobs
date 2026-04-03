@@ -4,7 +4,7 @@
 >
 > **CV Match Note:** Roles assessed against David Robertson's profile — AI systems builder specialising in LLM integration, agentic AI, workflow automation, structured output pipelines, SaaS product AI features, Python, TypeScript, Node.js, FastAPI, AWS, MCP (Model Context Protocol), LangChain, LangGraph, RAG pipelines, Claude Agents SDK, VPS/Linux production deployment. Preferred: contract, remote or Edinburgh-based.
 >
-> **Sources Searched:** OutsideSpy (contracts.outsidespy.co.uk), QualityContracts, Reed, CWJobs, ArtificialIntelligenceJobs.co.uk, Morson Edge, Intec Select, Edison Smart, Gigged.AI, Urban Connect, Maxwell Bond, Akkodis, Cititec, The Bridge IT, Jobsite, Transparent Technology, outsideir35.org.uk, Wellfound, LinkedIn Jobs UK, TechNET IT, Involved Solutions, machinelearningjobs.co.uk, TotalJobs, CV-Library, aijobs.net, Damia Group, Futurus Financial, Omnis Partners, Oliver Bernard, AI Connect, Haystack
+> **Sources Searched:** OutsideSpy (contracts.outsidespy.co.uk), QualityContracts, Reed, CWJobs, ArtificialIntelligenceJobs.co.uk, Morson Edge, Morson Talent, Intec Select, Edison Smart, Gigged.AI, Urban Connect, Maxwell Bond, Akkodis, Cititec, The Bridge IT, Jobsite, Transparent Technology, outsideir35.org.uk, Wellfound, LinkedIn Jobs UK, TechNET IT, Involved Solutions, machinelearningjobs.co.uk, TotalJobs, CV-Library, aijobs.net, Damia Group, Futurus Financial, Omnis Partners, Oliver Bernard, AI Connect, Haystack, Nigel Frank International, Exalto Consulting, Experis, remote-jobs.com, RemoteWorker UK, Robson Bale Limited
 >
 > **Access Note:** Several job boards (LinkedIn, Indeed, Hays, Harvey Nash) return 403 or do not expose full listings via search indexing. All listings confirmed via aggregator cross-referencing and direct agency sites. Recency notes applied where post dates could be confirmed.
 >
@@ -94,6 +94,92 @@
 
 ---
 
+---
+
+## CONTRACT ROLES — OUTSIDE IR35 — ADDITIONAL NEW LISTINGS (Second Search Pass)
+
+The following roles were surfaced in a second parallel search pass and are confirmed active outside IR35 contract opportunities not included in the initial listing above:
+
+---
+
+### 7. AWS & Generative AI Engineer — Claude / LangGraph / RAG (Nigel Frank) **[NEW / PRIORITY]**
+**Company:** Undisclosed (via Nigel Frank International)
+**Location:** Fully Remote (UK)
+**Day Rate:** £350/day
+**Duration:** 14 weeks
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Fully Remote
+**Link:** [nigelfrank.com — AWS & Generative AI Engineer](https://www.nigelfrank.com/job/a0GP900000FGWwH.1_1765819654/aws-amp-generative-ai-engineer)
+
+**CV Match:** Explicitly lists AWS Bedrock, AgentCore, LangGraph, RAG pipelines with vector databases, and integration/fine-tuning of **Claude (Anthropic) or GPT-4** — one of very few roles in the market that explicitly names Claude; direct match for David's AWS Bedrock and agentic AI delivery; rate is below target but technical alignment is outstanding.
+
+---
+
+### 8. AI Engineer — Higher Education / LLM / Conversational Agents (QualityContracts) **[NEW]**
+**Company:** Undisclosed Higher Education Institution (via QualityContracts)
+**Location:** Fully Remote (UK)
+**Day Rate:** £550–£650/day
+**Duration:** Not stated
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Fully Remote
+**Link:** [qualitycontracts.co.uk — ID 1774495106](https://qualitycontracts.co.uk/contract-jobs/remote-ai-engineer-in-london-england-united-kingdom-1774495106)
+
+**CV Match:** Lead LLM-based conversational agent development for Higher Education — generative AI, prompt engineering, AWS, conversational/agentic systems; listing ID 1774495106 not surfaced in previous searches; £550–£650/day is a strong rate for a fully remote role.
+
+---
+
+### 9. LLM Engineer — OpenAI / Anthropic API (Morson / RemoteWorker UK) **[NEW]**
+**Company:** Major Pharmaceutical Company (via Morson Talent / RemoteWorker UK)
+**Location:** Fully Remote (UK)
+**Day Rate:** Competitive (not published)
+**Duration:** Not stated
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Fully Remote
+**Link:** [morson.com — LLM Engineer OpenAI Remote Outside IR35](https://www.morson.com/jobs/it-and-digital/contract/england/llm-engineer-openai-remote-outside-ir35) | [LinkedIn](https://uk.linkedin.com/jobs/view/llm-engineer-openai-remote-outside-ir35-at-remoteworker-uk-3879852019)
+
+**CV Match:** LLM integration using OpenAI or Anthropic APIs, Python, Docker, Kubernetes, React — Anthropic API is a direct match for David's Claude-based development work; fully remote pharma engagement.
+
+---
+
+### 10. Senior Full Stack AI Engineer (LLM) — Remote Outside IR35 (Exalto Consulting) **[NEW]**
+**Company:** Undisclosed (via Exalto Consulting)
+**Location:** Fully Remote (UK)
+**Day Rate:** Not published (6-month contract, estimated £550–£700/day)
+**Duration:** 6 months initial, likely to extend
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Fully Remote
+**Link:** [exalto-consulting.com — Senior Full Stack AI Engineer](https://exalto-consulting.com/job/senior-full-stack-ai-engineer-llm-remote-outside-ir35)
+
+**CV Match:** Deep learning, NLP, generative AI, Python, advanced ML/LLM frameworks, TypeScript, AWS — full-stack AI engineering across David's exact stack; fully remote and outside IR35; urgent need flagged.
+
+---
+
+### 11. Data Scientist — AI Agents — Remote Outside IR35 (Morson / Major Pharma) **[NEW]**
+**Company:** Major Pharmaceutical Company (via Morson Talent)
+**Location:** Fully Remote (UK)
+**Day Rate:** Not published
+**Duration:** Not stated
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Fully Remote
+**Link:** [morson.com — Data Scientist AI Agents Remote Outside IR35](https://www.morson.com/jobs/it-and-digital/contract/england/data-scientist-ai-agents-remote-outside-ir35)
+
+**CV Match:** AI agent development at a major pharmaceutical company, fully remote and outside IR35 — agentic AI is David's core specialism; Morson is actively placing multiple outside IR35 pharma AI roles suggesting a wider programme.
+
+---
+
+### 12. AI Engineer — Agentic AI / LangChain / LangGraph (Experis) **[NEW — BORDERLINE ON-SITE]**
+**Company:** Undisclosed (via Experis)
+**Location:** London — Hybrid (2 days/week on-site)
+**Day Rate:** Up to £450/day
+**Duration:** Not stated
+**IR35 Status:** **Outside IR35**
+**Remote Status:** Hybrid (2 days London — borderline, worth confirming if negotiable)
+**Link:** [experis.co.uk — AI Engineer Agentic AI LLM](https://www.experis.co.uk/job/ai-engineer-agentic-ai-python-pycharm-llm-agentic-5821195) | [totaljobs.com](https://www.totaljobs.com/job/ai-engineer-agentic-ai-python-pycharm-llm-agentic/experis-job106872367)
+
+**CV Match:** Design and build agentic AI systems using LangChain, LangGraph, Vertex AI Agent Builder, Bedrock Agents, CrewAI — multi-agent systems, RAG, vector search, NLP, GenAI pipelines; exact technical match; 2 days onsite is at the limit — confirm schedule before applying.
+
+---
+
 ## CONTRACT ROLES — OUTSIDE IR35 — CARRIED FORWARD (Active, High Priority)
 
 The following roles from 28 March – 2 April searches remain unactioned priority targets:
@@ -162,10 +248,16 @@ The following roles from 28 March – 2 April searches remain unactioned priorit
 |---|------|---------|------|------|--------|---------|
 | 1 | Agentic RAG Engineer / Architect **[NEW]** | Futurus Financial | **Outside IR35** | TBC | Hybrid (London) | ⭐⭐⭐⭐⭐ |
 | 2 | Agentic Systems Engineer / Architect **[NEW]** | Futurus Financial | **Outside IR35** | TBC | Hybrid (London) | ⭐⭐⭐⭐⭐ |
-| 3 | Senior AI Engineer — £700/day **[NEW]** | Akkodis | **Outside IR35** | £650–£750/day | Hybrid (London) | ⭐⭐⭐⭐ |
-| 4 | Senior AI Engineer — £700/day **[NEW]** | Akkodis | **Outside IR35** | £700/day | Hybrid (London) | ⭐⭐⭐⭐ |
-| 5 | Machine Learning Engineer — GenAI **[NEW]** | Damia Group | **Outside IR35** | TBC | Hybrid (London) | ⭐⭐⭐⭐ |
-| 6 | Principal ML Engineer — ASAP **[NEW]** | Omnis Partners | **Outside IR35** | TBC | Hybrid (London) | ⭐⭐⭐ |
+| 3 | AWS & Generative AI Engineer — Claude / LangGraph **[NEW]** | Nigel Frank | **Outside IR35** | £350/day | Fully Remote | ⭐⭐⭐⭐⭐ |
+| 4 | AI Engineer — Higher Education LLM **[NEW]** | QualityContracts | **Outside IR35** | £550–£650/day | Fully Remote | ⭐⭐⭐⭐⭐ |
+| 5 | Senior AI Engineer — £700/day **[NEW]** | Akkodis | **Outside IR35** | £650–£750/day | Hybrid (London) | ⭐⭐⭐⭐ |
+| 6 | Senior AI Engineer — £700/day **[NEW]** | Akkodis | **Outside IR35** | £700/day | Hybrid (London) | ⭐⭐⭐⭐ |
+| 7 | LLM Engineer — Anthropic API **[NEW]** | Morson / RemoteWorker UK | **Outside IR35** | TBC | Fully Remote | ⭐⭐⭐⭐ |
+| 8 | Senior Full Stack AI Engineer (LLM) **[NEW]** | Exalto Consulting | **Outside IR35** | TBC | Fully Remote | ⭐⭐⭐⭐ |
+| 9 | Data Scientist — AI Agents **[NEW]** | Morson (Pharma) | **Outside IR35** | TBC | Fully Remote | ⭐⭐⭐⭐ |
+| 10 | Machine Learning Engineer — GenAI **[NEW]** | Damia Group | **Outside IR35** | TBC | Hybrid (London) | ⭐⭐⭐⭐ |
+| 11 | Principal ML Engineer — ASAP **[NEW]** | Omnis Partners | **Outside IR35** | TBC | Hybrid (London) | ⭐⭐⭐ |
+| 12 | AI Engineer — Agentic AI / LangGraph (borderline) **[NEW]** | Experis | **Outside IR35** | Up to £450/day | Hybrid 2d London | ⭐⭐⭐ |
 
 ---
 
@@ -199,6 +291,10 @@ Visit these directly with "posted today" / "past 24 hours" filters applied:
 
 ---
 
+**IR35 Note (April 2026):** From 6 April 2026, new Joint and Several Liability (JSL) rules targeting umbrella company supply chains take effect, and approximately 14,000 companies reclassify as "small" (allowing contractors to self-determine IR35 status). This may increase the volume of outside IR35 roles available through April — watch for new postings through the week.
+
+---
+
 *Search conducted: 3 April 2026 | CV matched to: David Robertson — AI Engineer & Systems Architect*
-*Total new roles identified today: 6 confirmed new contract listings | Total including carried forward: 36+ active contract opportunities*
-*Sources: OutsideSpy · QualityContracts · Reed · CWJobs · Jobsite · TotalJobs · CV-Library · Morson Edge · Intec Select · Edison Smart · Cititec · Gigged.AI · Urban Connect · Maxwell Bond · Akkodis · Damia Group · Futurus Financial · Omnis Partners · The Bridge IT · Transparent Technology · Robson Bale Limited · Involved Solutions · Method Resourcing · Ember Software · Hexwired Recruitment · LinkedIn Jobs UK · 9Nexus · Stealth iT Consulting · TechNET IT · outsideir35.org.uk · machinelearningjobs.co.uk · aijobs.net · ArtificialIntelligenceJobs.co.uk · Oliver Bernard · AI Connect · Haystack*
+*Total new roles identified today: 12 confirmed new contract listings | Total including carried forward: 42+ active contract opportunities*
+*Sources: OutsideSpy · QualityContracts · Reed · CWJobs · Jobsite · TotalJobs · CV-Library · Morson Edge · Morson Talent · Intec Select · Edison Smart · Cititec · Gigged.AI · Urban Connect · Maxwell Bond · Akkodis · Damia Group · Futurus Financial · Omnis Partners · The Bridge IT · Transparent Technology · Robson Bale Limited · Involved Solutions · Method Resourcing · Ember Software · Hexwired Recruitment · Nigel Frank International · Exalto Consulting · Experis · remote-jobs.com · RemoteWorker UK · LinkedIn Jobs UK · 9Nexus · Stealth iT Consulting · TechNET IT · outsideir35.org.uk · machinelearningjobs.co.uk · aijobs.net · ArtificialIntelligenceJobs.co.uk · Oliver Bernard · AI Connect · Haystack*
