@@ -8,7 +8,7 @@
 >
 > **Access Note:** Direct page fetches to LinkedIn, Indeed, outsideir35.org.uk, qualitycontracts.co.uk, transparent.tech, totaljobs.com, and scottishai.com returned 403. All listings confirmed via aggregator cross-referencing, Google-indexed snippets, and secondary mirrors (it-jobs.co.uk, outsidespy.co.uk, glassdoor.co.uk). Recency and content verified from multiple sources.
 >
-> **Delta Note:** Previous run was 05 April 2026. CF table from 05-04 confirmed 44 carried-forward outside IR35 roles. Today's search identifies 2 genuinely new roles not previously captured. All 05-04 CF roles assumed active unless otherwise noted.
+> **Delta Note:** Previous run was 05 April 2026. CF table from 05-04 confirmed 44 carried-forward outside IR35 roles. First pass identified 2 new roles; second pass (same day) identifies 6 additional new roles. Total new today: 8. All 05-04 CF roles assumed active unless otherwise noted.
 
 ---
 
@@ -38,6 +38,130 @@
 **Contact:** Helen Bewick — helen.bewick@akkodisgroup.com
 
 **CV Match:** Directly maps to David's workflow automation and agentic AI delivery specialism — converting manual human processes into production AI systems is the core of his recent McCaigs Group work. ChatGPT Enterprise experience aligns with broader LLM integration portfolio. £650/day is strong; London hybrid is the only friction. Not previously in CF list — first identified today.
+
+---
+
+## CONTRACT ROLES — OUTSIDE IR35 — NEW TODAY (SECOND PASS)
+
+---
+
+### 3. Artificial Intelligence Engineer — TRG Recruitment **[NEW TODAY / PRIORITY]**
+
+| Field | Detail |
+|---|---|
+| **Company / Recruiter** | TRG Recruitment (trg.recruitment) |
+| **Location** | United Kingdom — Fully Remote |
+| **Day Rate** | £550–£600/day |
+| **Contract Type** | Contract |
+| **IR35 Status** | **Outside IR35** |
+| **Duration** | 6 months |
+| **Start Date** | 19 May 2026 |
+| **Remote Status** | Fully Remote |
+
+**Links:**
+- https://contracts.outsidespy.co.uk/job/342442/artificial-intelligence-engineer-at-trg-recruitment-united-kingdom-550-600-per-day/
+- https://artificialintelligencejobs.co.uk/view-job/artificial-intelligence-engineer-640c226855d0
+- https://outsideir35.org.uk/jobs/artificial-intelligence-engineer/Bzb1kxhfyO
+
+**Key Skills:** Python engineering for a GenAI project; LLMs and agentic frameworks. 6-month contract, fully remote, Outside IR35.
+
+**CV Match:** Directly matches David's Python + LLM + agentic AI delivery stack. Fully remote and well-rated at £550–£600/day makes this a strong candidate. May start date gives time to wrap current engagements.
+
+---
+
+### 4. Data Scientist — Involved Solutions **[NEW TODAY]**
+
+| Field | Detail |
+|---|---|
+| **Company / Recruiter** | Involved Solutions |
+| **Location** | Central London — Hybrid |
+| **Day Rate** | Up to £450/day |
+| **Contract Type** | Contract |
+| **IR35 Status** | **Outside IR35** |
+| **Duration** | 6 months + extension likely |
+| **Remote Status** | Hybrid (Central London) |
+
+**Links:**
+- https://www.involvedsolutions.com/jobs/5306-Data-Scientist---up-to-450day-Outside-IR35---Hybrid/
+
+**Key Skills:** Machine learning expertise; data science in a commercial/hybrid environment. Separate listing from CF-28 (AI/ML Engineer NLP/LLM) and CF-44 (train LLMs from scratch) — different role spec from the same recruiter.
+
+**CV Match:** Moderate match — data science/ML focus rather than pure LLM engineering. Rate is below top target but Outside IR35 and London hybrid is acceptable.
+
+---
+
+### 5. AI Python Developer — LLM / Pharma — The Bridge IT **[NEW TODAY]**
+
+| Field | Detail |
+|---|---|
+| **Company / Recruiter** | The Bridge IT Recruitment |
+| **Client** | Major Pharmaceutical Company |
+| **Location** | Greater London — Fully Remote |
+| **Day Rate** | £400–£405/day |
+| **Contract Type** | Contract |
+| **IR35 Status** | **Outside IR35** |
+| **Remote Status** | Fully Remote |
+
+**Links:**
+- https://contracts.outsidespy.co.uk/job/339900/ai-python-developer-llm-remote-outside-ir35-at-the-bridge-it-recruitment-greater-london-400-to-405-per-day/
+
+**Key Skills:** AI, LLM, Python, AWS; Pharma client. **Note:** Separate listing from CF-36 (AI Engineer Deep Learning / Python / CV at £650–750/day from same recruiter) — different focus (LLM vs Computer Vision) and materially different rate.
+
+**CV Match:** Solid match on Python + LLM + AWS stack; Pharma context is similar to CF-9/CF-30/CF-42. Rate is below target but Outside IR35 and fully remote.
+
+---
+
+### 6. MLOps Engineer — Image / Pharma — The Bridge IT **[NEW TODAY]**
+
+| Field | Detail |
+|---|---|
+| **Company / Recruiter** | The Bridge IT Recruitment |
+| **Client** | Major Pharmaceutical Company |
+| **Location** | UK (Caledonian) — Fully Remote |
+| **Day Rate** | TBC |
+| **Contract Type** | Contract |
+| **IR35 Status** | **Outside IR35** |
+| **Remote Status** | Fully Remote |
+
+**Links:**
+- https://machinelearningjobs.co.uk/jobs/mlops-engineer-image-remote-outside-ir35-e9ujj8bnkh
+
+**Key Skills:** MLOps, image data, AWS, PyTorch, TensorFlow, JAX; Pharma client. Separate from CF-36 (AI Engineer Deep Learning Python CV) — MLOps-focused with image/vision pipeline specialisation.
+
+**CV Match:** Good match for production ML infrastructure background; AWS and PyTorch align with David's stack. Rate TBC is a risk but Outside IR35 and fully remote.
+
+---
+
+### 7. Agentic AI Expert — Add Velocity **[NEW TODAY]**
+
+| Field | Detail |
+|---|---|
+| **Company** | Add Velocity (AI-native consultancy) |
+| **Location** | United Kingdom — Remote-first (team mostly London-based) |
+| **Day Rate** | Contract option (rate TBC) |
+| **Contract Type** | Contract / Part-time considered |
+| **IR35 Status** | IR35 Status: TBC |
+| **Remote Status** | Remote-First |
+
+**Links:**
+- https://contracts.contractspy.co.uk/job/134757/agentic-ai-expert-at-add-velocity-united-kingdom-contract-option/
+
+**Key Skills:** Production-grade AI agents and multi-agent systems for regulated asset managers. Architecture through to deployment and optimisation. AI-native consultancy positioning.
+
+**CV Match:** Strong conceptual match — agentic AI architecture for regulated financial services is close to David's production agentic delivery work. Rate TBC and IR35 not confirmed are the friction points; worth engaging to clarify terms.
+
+---
+
+### ⚡ ALSO NOTED — AI Training / Evaluation Gigs (YO IT Consulting)
+
+Low-day-rate flexible freelance roles from YO IT Consulting evaluating LLM-generated code. Not traditional engineering contracts but could serve as background income or portfolio signals:
+
+| Role | URL |
+|---|---|
+| Python Developer - LLM | https://contracts.contractspy.co.uk/job/134793/ |
+| Golang/Go Developer - LLM | https://contracts.contractspy.co.uk/job/134660/ |
+| Rust Developer - AI Training | https://contracts.contractspy.co.uk/job/134726/ |
+| C++ Software Engineer - AI Training | https://contracts.contractspy.co.uk/job/134725/ |
 
 ---
 
@@ -131,6 +255,12 @@ The following roles from 28 March – 5 April 2026 searches remain active and un
 | CF-45 | AI Automation Developer — HR / WealthTech | Transparent Technology | £350/day | Fully Remote | ⭐⭐⭐⭐ |
 | CF-46 | MLOps Engineer — AI Trainer (Freelance, 8–20 hrs/wk) | 10x Team | TBC | Fully Remote | ⭐⭐⭐⭐ |
 | CF-47 | Contract AI Engineer — GCP | Nigel Frank / Tenth Revolution Group | £485/day | Hybrid (2d London) | ⭐⭐⭐⭐ |
+| CF-48 | AI Engineer (ChatGPT Enterprise) **[NEW 06-04]** | Akkodis | £650/day | Hybrid (London) | ⭐⭐⭐⭐⭐ |
+| CF-49 | Artificial Intelligence Engineer — GenAI / Python **[NEW 06-04]** | TRG Recruitment | £550–£600/day | Fully Remote | ⭐⭐⭐⭐⭐ |
+| CF-50 | Data Scientist **[NEW 06-04]** | Involved Solutions | Up to £450/day | Hybrid (Central London) | ⭐⭐⭐ |
+| CF-51 | AI Python Developer — LLM / Pharma **[NEW 06-04]** | The Bridge IT | £400–£405/day | Fully Remote | ⭐⭐⭐⭐ |
+| CF-52 | MLOps Engineer — Image / Pharma **[NEW 06-04]** | The Bridge IT | TBC | Fully Remote | ⭐⭐⭐⭐ |
+| CF-53 | Agentic AI Expert **[NEW 06-04]** | Add Velocity | TBC | Remote-First | ⭐⭐⭐⭐ |
 
 > **⚠️ URGENT — CF-14 (Urban Connect / Data Scientist LLM / AWS Bedrock):** Start date is 13 April 2026 — 7 days away. If not yet applied, apply today.
 >
@@ -147,13 +277,18 @@ The following roles from 28 March – 5 April 2026 searches remain active and un
 
 ---
 
-## PRIORITY SUMMARY — TODAY'S NEW LISTINGS
+## PRIORITY SUMMARY — TODAY'S NEW LISTINGS (ALL PASSES)
 
 | # | Role | Company | IR35 | Rate | Remote | Match |
 |---|------|---------|------|------|--------|-------|
 | 1 | AI Engineer (ChatGPT Enterprise) **[NEW / CONTRACT]** | Akkodis | **Outside IR35** | £650/day | Hybrid (London) | ⭐⭐⭐⭐⭐ |
 | 2 | Applied LLM Engineer **[NEW / PERM / EDINBURGH]** | Wordsmith AI | N/A (Perm) | Up to £100k + equity | Hybrid Edinburgh/London | ⭐⭐⭐⭐⭐ |
+| 3 | Artificial Intelligence Engineer **[NEW / CONTRACT]** | TRG Recruitment | **Outside IR35** | £550–£600/day | Fully Remote | ⭐⭐⭐⭐⭐ |
+| 4 | Data Scientist **[NEW / CONTRACT]** | Involved Solutions | **Outside IR35** | Up to £450/day | Hybrid (London) | ⭐⭐⭐ |
+| 5 | AI Python Developer — LLM **[NEW / CONTRACT]** | The Bridge IT | **Outside IR35** | £400–£405/day | Fully Remote | ⭐⭐⭐⭐ |
+| 6 | MLOps Engineer — Image/Pharma **[NEW / CONTRACT]** | The Bridge IT | **Outside IR35** | TBC | Fully Remote | ⭐⭐⭐⭐ |
+| 7 | Agentic AI Expert **[NEW / CONTRACT]** | Add Velocity | IR35: TBC | TBC | Remote-First | ⭐⭐⭐⭐ |
 
 ---
 
-*Sources: [OutsideSpy](https://contracts.outsidespy.co.uk) · [QualityContracts](https://qualitycontracts.co.uk) · [IT-Jobs.co.uk](https://www.it-jobs.co.uk) · [Glassdoor UK](https://www.glassdoor.co.uk) · [Wordsmith AI Careers](https://www.wordsmith.ai/careers/open-positions) · [MachinelearningJobs.co.uk](https://machinelearningjobs.co.uk) · [Transparent Technology](https://www.transparent.tech) · [Nigel Frank](https://www.nigelfrank.com) · [Reed Edinburgh](https://www.reed.co.uk/jobs/ai-machine-learning-engineer-jobs-in-edinburgh) · [Hacker News April 2026 Hiring](https://news.ycombinator.com/item?id=47601859) · [JobSite](https://www.jobsite.co.uk/jobs/contract/artificial-intelligence) · [TotalJobs](https://www.totaljobs.com/jobs/machine-learning/in-edinburgh) · [LinkedIn Edinburgh AI](https://uk.linkedin.com/jobs/artificial-intelligence-jobs-edinburgh)*
+*Sources: [OutsideSpy](https://contracts.outsidespy.co.uk) · [ContractSpy](https://contracts.contractspy.co.uk) · [QualityContracts](https://qualitycontracts.co.uk) · [IT-Jobs.co.uk](https://www.it-jobs.co.uk) · [OutsideIR35.org.uk](https://outsideir35.org.uk) · [Glassdoor UK](https://www.glassdoor.co.uk) · [Wordsmith AI Careers](https://www.wordsmith.ai/careers/open-positions) · [MachinelearningJobs.co.uk](https://machinelearningjobs.co.uk) · [ArtificialIntelligenceJobs.co.uk](https://artificialintelligencejobs.co.uk) · [Transparent Technology](https://www.transparent.tech) · [Nigel Frank](https://www.nigelfrank.com) · [Cititec](https://cititec.com) · [Involved Solutions](https://www.involvedsolutions.com) · [Gigged.AI](https://gigged.ai) · [Add Velocity](https://contracts.contractspy.co.uk/job/134757/) · [Reed Edinburgh](https://www.reed.co.uk/jobs/ai-machine-learning-engineer-jobs-in-edinburgh) · [Hacker News April 2026 Hiring](https://news.ycombinator.com/item?id=47601859) · [HNHiring Remote](https://hnhiring.com/locations/remote) · [JobSite](https://www.jobsite.co.uk/jobs/contract/artificial-intelligence) · [TotalJobs](https://www.totaljobs.com/jobs/machine-learning/in-edinburgh) · [LinkedIn Edinburgh AI](https://uk.linkedin.com/jobs/artificial-intelligence-jobs-edinburgh)*
