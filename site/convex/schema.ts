@@ -31,4 +31,16 @@ export default defineSchema({
     .index("by_fitScore", ["fitScore"])
     .index("by_publishedAt", ["publishedAt"])
     .index("by_isActive", ["isActive"]),
+
+  jobReports: defineTable({
+    fileName: v.string(),
+    fileUrl: v.string(),
+    content: v.string(),
+    contentHash: v.string(),
+    pulledAt: v.number(),
+    source: v.string(),
+  })
+    .index("by_fileName", ["fileName"])
+    .index("by_contentHash", ["contentHash"])
+    .index("by_pulledAt", ["pulledAt"]),
 });

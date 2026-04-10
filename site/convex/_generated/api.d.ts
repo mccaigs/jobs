@@ -8,7 +8,11 @@
  * @module
  */
 
+import type * as crons from "../crons.js";
+import type * as githubIngest from "../githubIngest.js";
 import type * as http from "../http.js";
+import type * as jobReportsMutations from "../jobReportsMutations.js";
+import type * as jobReportsQueries from "../jobReportsQueries.js";
 import type * as reports from "../reports.js";
 
 import type {
@@ -18,7 +22,11 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  crons: typeof crons;
+  githubIngest: typeof githubIngest;
   http: typeof http;
+  jobReportsMutations: typeof jobReportsMutations;
+  jobReportsQueries: typeof jobReportsQueries;
   reports: typeof reports;
 }>;
 

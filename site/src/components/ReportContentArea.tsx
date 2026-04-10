@@ -40,19 +40,18 @@ export function ReportContentArea({ report, isLoading = false }: ReportContentAr
 
   if (isLoading) {
     return (
-      <div className="mt-8 p-8 rounded-3xl" style={{ background: 'rgba(28,25,23,0.4)' }}>
-        <div className="animate-pulse space-y-6 max-w-3xl">
-          <div className="h-8 bg-stone-800 rounded w-2/3" />
-          <div className="space-y-3">
-            <div className="h-4 bg-stone-800 rounded" />
-            <div className="h-4 bg-stone-800 rounded w-5/6" />
-            <div className="h-4 bg-stone-800 rounded w-4/6" />
-          </div>
-          <div className="space-y-3 pt-4">
-            <div className="h-6 bg-stone-800 rounded w-1/3" />
-            <div className="h-4 bg-stone-800 rounded" />
-            <div className="h-4 bg-stone-800 rounded w-5/6" />
-          </div>
+      <div className="mt-10 animate-pulse space-y-5 max-w-3xl">
+        <div className="h-7 bg-stone-800/50 rounded w-2/3" />
+        <div className="h-3 bg-stone-800/30 rounded w-1/4" />
+        <div className="space-y-2.5 pt-4">
+          <div className="h-3.5 bg-stone-800/40 rounded" />
+          <div className="h-3.5 bg-stone-800/40 rounded w-5/6" />
+          <div className="h-3.5 bg-stone-800/40 rounded w-4/6" />
+        </div>
+        <div className="space-y-2.5 pt-2">
+          <div className="h-5 bg-stone-800/30 rounded w-1/3" />
+          <div className="h-3.5 bg-stone-800/40 rounded" />
+          <div className="h-3.5 bg-stone-800/40 rounded w-5/6" />
         </div>
       </div>
     );
@@ -60,24 +59,9 @@ export function ReportContentArea({ report, isLoading = false }: ReportContentAr
 
   if (!displayReport) {
     return (
-      <div
-        className="mt-8 p-12 rounded-3xl flex flex-col items-center justify-center text-center"
-        style={{ background: 'rgba(28,25,23,0.3)', minHeight: '240px' }}
-      >
-        <div
-          className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4"
-          style={{ background: 'rgba(212,165,116,0.08)' }}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d4a574" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-            <polyline points="14 2 14 8 20 8"/>
-            <line x1="16" y1="13" x2="8" y2="13"/>
-            <line x1="16" y1="17" x2="8" y2="17"/>
-          </svg>
-        </div>
-        <h3 className="font-newsreader text-2xl italic text-white mb-2">No Report Selected</h3>
-        <p className="font-manrope text-stone-500 text-sm">
-          Select a report from the index to read the full intelligence briefing.
+      <div className="mt-10 py-8">
+        <p className="font-manrope text-stone-700 text-sm">
+          Select a report from the index.
         </p>
       </div>
     );
@@ -85,43 +69,36 @@ export function ReportContentArea({ report, isLoading = false }: ReportContentAr
 
   return (
     <div style={containerStyle}>
-      <article
-        className="mt-8 p-8 rounded-3xl"
-        style={{ background: 'rgba(28,25,23,0.4)' }}
-      >
+      <article className="mt-10">
         {/* Report header */}
         <header className="mb-8 pb-6" style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-          <div className="flex items-center gap-3 mb-4">
-            <span
-              className="px-2.5 py-1 rounded-md font-manrope text-[10px] font-bold uppercase tracking-widest"
-              style={{ background: 'rgba(212,165,116,0.12)', color: '#d4a574' }}
-            >
-              AI Intelligence
-            </span>
-            {displayReport.isLatest && (
-              <span
-                className="px-2.5 py-1 rounded-md font-manrope text-[10px] font-bold uppercase tracking-widest"
-                style={{ background: 'rgba(127,176,105,0.12)', color: '#7fb069' }}
-              >
-                Latest
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-3">
+              <span className="font-manrope text-[10px] uppercase tracking-[0.15em] text-stone-600">
+                AI Intelligence
               </span>
-            )}
+              {displayReport.isLatest && (
+                <span className="font-manrope text-[10px] uppercase tracking-[0.15em]" style={{ color: '#d4a574' }}>
+                  · Latest
+                </span>
+              )}
+            </div>
             <a
               href={getReportSourceUrl(displayReport.slug)}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-auto flex items-center gap-1.5 font-manrope text-[10px] font-bold uppercase tracking-widest text-stone-600 hover:text-stone-300 transition-colors"
+              className="font-manrope text-[10px] uppercase tracking-[0.12em] text-stone-700 hover:text-stone-400 transition-colors"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 24 24">
-                <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd"/>
-              </svg>
-              View Source
+              View source
             </a>
           </div>
-          <h2 className="font-newsreader text-3xl italic text-white mb-1 leading-tight">
+          <h2
+            className="font-newsreader italic text-white leading-tight mb-2"
+            style={{ fontSize: '1.9rem', letterSpacing: '-0.015em' }}
+          >
             {displayReport.displayLabel ?? displayReport.title}
           </h2>
-          <p className="font-manrope text-stone-500 text-xs">
+          <p className="font-manrope text-stone-600 text-xs">
             {displayReport.date.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
           </p>
         </header>

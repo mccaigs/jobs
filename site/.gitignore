@@ -10,7 +10,11 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-*.local
+
+# Ignore secret local env files but allow Convex deployment config
+.env
+.env.*.local
+!.env.local
 
 # Editor directories and files
 .vscode/*

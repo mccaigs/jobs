@@ -9,22 +9,23 @@ import { MarketSignalCard } from './components/MarketSignalCard';
 import { TopMatchesList } from './components/TopMatchesList';
 import { ReportIndexRail } from './components/ReportIndexRail';
 import { ReportContentArea } from './components/ReportContentArea';
-import { mapConvexReports } from './services/convexReports';
-import type { ConvexReport } from './services/convexReports';
+import { mapJobReportsToReports } from './services/jobReportsService';
+import type { JobReport } from './services/jobReportsService';
 import type { Report } from './types/report';
 
 function IntelligencePage() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
 
-  const rawReports = useQuery(anyApi.reports.listReports, {});
-  const isLoading = rawReports === undefined;
-  const isError = rawReports === null;
+  // Fetch from jobReports table (populated by cron jobs)
+  const rawJobReports = useQuery(anyApi.jobReportsQueries.listJobReports, {});
+  const isLoading = rawJobReports === undefined;
+  const isError = rawJobReports === null;
 
   const reports = useMemo<Report[]>(() => {
-    if (!rawReports || isError) return [];
-    return mapConvexReports(rawReports as ConvexReport[]);
-  }, [rawReports, isError]);
+    if (!rawJobReports || isError) return [];
+    return mapJobReportsToReports(rawJobReports as JobReport[]);
+  }, [rawJobReports, isError]);
 
   const currentReport = useMemo<Report | null>(() => {
     if (slug) return reports.find(r => r.slug === slug) ?? null;
@@ -50,7 +51,7 @@ function IntelligencePage() {
   // Full-page error
   if (isError) {
     return (
-      <div className="min-h-screen flex flex-col" style={{ background: '#0c0a09' }}>
+      <div className="flex flex-col" style={{ background: '#0c0a09' }}>
         <TopNavBar onRefresh={handleRefresh} isLoading={false} />
         <div className="flex-1 flex items-center justify-center p-8">
           <div
@@ -77,15 +78,17 @@ function IntelligencePage() {
     );
   }
 
+  const lastPulled = rawJobReports?.[0]?.pulledAt;
+
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: '#0c0a09', color: '#ece8e0' }}>
+    <div className="flex flex-col" style={{ background: '#0c0a09', color: '#ece8e0', minHeight: '100vh' }}>
       {/* Fixed top nav */}
       <TopNavBar onRefresh={handleRefresh} isLoading={isLoading} />
 
       {/* Page body: sidebar + main content canvas */}
-      <div className="flex flex-1 max-w-[1440px] mx-auto w-full relative">
+      <div className="flex flex-1 max-w-[1440px] mx-auto w-full">
 
-        {/* Left sidebar — Stitch insight rail */}
+        {/* Left sidebar — scan archive rail */}
         <SideNavBar
           reports={reports}
           activeReportId={currentReport?.id ?? null}
@@ -94,32 +97,46 @@ function IntelligencePage() {
         />
 
         {/* Main content canvas */}
-        <section
-          className="flex-1 p-8 lg:p-12 overflow-y-auto"
-          style={{ background: 'rgb(12,10,9)' }}
-        >
-          {/* Bento header grid: hero panel + market signal card */}
-          <div className="grid grid-cols-12 gap-6 mb-8">
+        <section className="flex-1 px-10 py-8 min-w-0">
+
+          {/* Masthead row: title + signal card */}
+          <div className="grid grid-cols-12 gap-x-12 mb-10">
             <HeroPanel report={currentReport} isLoading={isLoading} />
             <MarketSignalCard report={currentReport} isLoading={isLoading} />
           </div>
 
-          {/* Bottom grid: matches list + report index rail */}
-          <div className="grid grid-cols-12 gap-8">
-            {/* Top matches */}
-            <TopMatchesList report={currentReport} isLoading={isLoading} />
+          {/* Content + right rail */}
+          <div className="grid grid-cols-12 gap-x-12">
+            {/* Main column */}
+            <div className="col-span-12 xl:col-span-8 space-y-10">
+              <TopMatchesList report={currentReport} isLoading={isLoading} />
+              <ReportContentArea report={currentReport} isLoading={isLoading} />
 
-            {/* Right rail: report index + CV + match engine context */}
-            <ReportIndexRail
-              reports={reports}
-              activeReportId={currentReport?.id ?? null}
-              onSelectReport={handleSelectReport}
-              isLoading={isLoading}
-            />
+              {/* Debug panel */}
+              <div className="pt-6 flex flex-wrap gap-x-6 gap-y-1 font-manrope text-[10px] text-stone-700" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+                <span>Reports: <strong className="text-stone-600">{reports.length}</strong></span>
+                <span>Source: <strong className="text-stone-600">jobReports (cron)</strong></span>
+                {lastPulled && (
+                  <span>Last pulled: <strong className="text-stone-600">{new Date(lastPulled).toLocaleString('en-GB')}</strong></span>
+                )}
+                {currentReport && (
+                  <span>Viewing: <strong className="text-stone-600">{currentReport.slug}</strong></span>
+                )}
+              </div>
+            </div>
+
+            {/* Right rail */}
+            <div className="hidden xl:block xl:col-span-4">
+              <div className="sticky" style={{ top: '65px' }}>
+                <ReportIndexRail
+                  reports={reports}
+                  activeReportId={currentReport?.id ?? null}
+                  onSelectReport={handleSelectReport}
+                  isLoading={isLoading}
+                />
+              </div>
+            </div>
           </div>
-
-          {/* Full MDX report content area */}
-          <ReportContentArea report={currentReport} isLoading={isLoading} />
         </section>
       </div>
     </div>

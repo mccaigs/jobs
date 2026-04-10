@@ -53,5 +53,5 @@ export function mapConvexReports(rows: ConvexReport[]): Report[] {
 }
 
 export function getReportSourceUrl(slug: string, sourceRepo = 'mccaigs/jobs'): string {
-  return `https://github.com/${sourceRepo}/blob/main/reports/${slug}.md`;
+  return `https://github.com/${sourceRepo}/blob/master/${slug}.md`;
 }
