@@ -1,6 +1,6 @@
 "use node";
 
-import { action } from "./_generated/server";
+import { internalAction } from "./_generated/server";
 import { internal } from "./_generated/api";
 import type { Id } from "./_generated/dataModel";
 import crypto from "crypto";
@@ -135,7 +135,7 @@ function generateContentHash(content: string): string {
  *
  * Steady-state cost with no repo changes: 1 GitHub API call + 1 Convex query, 0 downloads.
  */
-export const ingestLatestJobReport = action({
+export const ingestLatestJobReport = internalAction({
   args: {},
   handler: async (ctx) => {
     console.log("🚀 Starting GitHub job report ingestion (SHA-diff)...");
