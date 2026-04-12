@@ -12,6 +12,7 @@ import { ReportContentArea } from './components/ReportContentArea';
 import { mapJobReportsToReports } from './services/jobReportsService';
 import type { JobReport } from './services/jobReportsService';
 import type { Report } from './types/report';
+import { AdminPanel } from './components/AdminPanel';
 
 function IntelligencePage() {
   const { slug } = useParams<{ slug: string }>();
@@ -48,6 +49,39 @@ function IntelligencePage() {
     // for the TopNavBar button to remain functional
   };
 
+  // Empty state: loaded but no reports at all
+  if (!isLoading && !isError && reports.length === 0) {
+    return (
+      <div className="flex flex-col" style={{ background: '#0c0a09', minHeight: '100vh' }}>
+        <TopNavBar onRefresh={handleRefresh} isLoading={false} />
+        <div className="flex-1 flex items-center justify-center p-8">
+          <div
+            className="text-center max-w-sm p-10 rounded-3xl"
+            style={{ background: 'rgba(28,25,23,0.8)' }}
+          >
+            <div
+              className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center"
+              style={{ background: 'rgba(120,113,108,0.10)' }}
+            >
+              <svg className="w-8 h-8" fill="none" stroke="#78716c" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h1 className="font-newsreader text-2xl text-white mb-3 italic">
+              No Reports Yet
+            </h1>
+            <p className="font-manrope text-stone-500 text-sm leading-relaxed mb-6">
+              The archive is empty. Trigger a sync to ingest reports from GitHub.
+            </p>
+            <div className="mt-2">
+              <AdminPanel reportCount={0} />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   // Full-page error
   if (isError) {
     return (
@@ -77,8 +111,6 @@ function IntelligencePage() {
       </div>
     );
   }
-
-  const lastPulled = rawJobReports?.[0]?.pulledAt;
 
   return (
     <div className="flex flex-col" style={{ background: '#0c0a09', color: '#ece8e0', minHeight: '100vh' }}>
@@ -117,23 +149,8 @@ function IntelligencePage() {
                 isLoading={isLoading}
               />
 
-              {/* Debug panel */}
-              <div className="pt-6 flex flex-wrap gap-x-4 gap-y-1 font-manrope text-[10px] text-stone-700" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
-                <span>Reports: <strong className="text-stone-600">{reports.length}</strong></span>
-                <span>Source: <strong className="text-stone-600">jobReports (cron)</strong></span>
-                {lastPulled && (
-                  <span>Last pulled: <strong className="text-stone-600">{new Date(lastPulled).toLocaleString('en-GB')}</strong></span>
-                )}
-                {currentReport && (
-                  <span>Slug: <strong className="text-stone-600">{currentReport.slug}</strong></span>
-                )}
-                {rawJobReports && (
-                  <span>In Convex: <strong className="text-stone-600">{rawJobReports.length}</strong></span>
-                )}
-                {currentReport?.parsed?.topMatches && (
-                  <span>Jobs rendered: <strong className="text-stone-600">{currentReport.parsed.topMatches.length}</strong></span>
-                )}
-              </div>
+              {/* Admin panel */}
+              <AdminPanel reportCount={reports.length} />
             </div>
 
             {/* Right rail */}

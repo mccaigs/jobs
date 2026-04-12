@@ -346,19 +346,50 @@ http.route({
 /**
  * POST /ingest/sync
  * Manually triggers the GitHub ingestion action immediately.
- * Useful when a new report has been pushed and you don't want to wait for the next cron.
+ * Writes a syncLog entry after each run so the admin panel can show last sync status.
  */
 http.route({
   path: "/ingest/sync",
   method: "POST",
   handler: httpAction(async (ctx) => {
+    const ranAt = Date.now();
     try {
       const result = await ctx.runAction(internal.githubIngest.ingestLatestJobReport, {});
+
+      // Derive latestReportDate from the most-recently inserted/updated report
+      const latestReport = await ctx.runQuery(api.jobReportsQueries.listJobReports, {});
+      const latestReportDate =
+        Array.isArray(latestReport) && latestReport.length > 0
+          ? (latestReport[0].reportDate ?? latestReport[0].pulledAt)
+          : undefined;
+
+      await ctx.runMutation(internal.syncLog.writeSyncLog, {
+        ranAt,
+        success: (result as { success?: boolean }).success ?? true,
+        inserted: (result as { processed?: number }).processed ?? 0,
+        updated: (result as { updated?: number }).updated ?? 0,
+        skipped: (result as { skipped?: number }).skipped ?? 0,
+        errors: (result as { errors?: string[] }).errors ?? [],
+        totalFiles: (result as { totalFiles?: number }).totalFiles ?? 0,
+        latestReportDate,
+        message: (result as { message?: string }).message ?? "Sync complete",
+      });
+
       return new Response(JSON.stringify({ ok: true, result }), {
         status: 200,
         headers: { "Content-Type": "application/json" },
       });
     } catch (err) {
+      await ctx.runMutation(internal.syncLog.writeSyncLog, {
+        ranAt,
+        success: false,
+        inserted: 0,
+        updated: 0,
+        skipped: 0,
+        errors: [String(err)],
+        totalFiles: 0,
+        message: String(err),
+      });
       return new Response(JSON.stringify({ ok: false, error: String(err) }), {
         status: 500,
         headers: { "Content-Type": "application/json" },

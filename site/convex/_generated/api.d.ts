@@ -14,6 +14,7 @@ import type * as http from "../http.js";
 import type * as jobReportsMutations from "../jobReportsMutations.js";
 import type * as jobReportsQueries from "../jobReportsQueries.js";
 import type * as reports from "../reports.js";
+import type * as syncLog from "../syncLog.js";
 
 import type {
   ApiFromModules,
@@ -28,6 +29,7 @@ declare const fullApi: ApiFromModules<{
   jobReportsMutations: typeof jobReportsMutations;
   jobReportsQueries: typeof jobReportsQueries;
   reports: typeof reports;
+  syncLog: typeof syncLog;
 }>;
 
 /**

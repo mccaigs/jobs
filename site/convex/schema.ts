@@ -32,6 +32,18 @@ export default defineSchema({
     .index("by_publishedAt", ["publishedAt"])
     .index("by_isActive", ["isActive"]),
 
+  syncLog: defineTable({
+    ranAt: v.number(),
+    success: v.boolean(),
+    inserted: v.number(),
+    updated: v.number(),
+    skipped: v.number(),
+    errors: v.array(v.string()),
+    totalFiles: v.number(),
+    latestReportDate: v.optional(v.number()),
+    message: v.string(),
+  }).index("by_ranAt", ["ranAt"]),
+
   jobReports: defineTable({
     fileName: v.string(),
     fileUrl: v.string(),
