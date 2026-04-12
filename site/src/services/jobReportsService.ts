@@ -1,5 +1,6 @@
 import type { Report } from '../types/report';
 import { parseReport } from '../utils/reportParser';
+import { extractReportDate } from '../utils/reportDate';
 
 export interface JobReport {
   _id: string;
@@ -10,33 +11,16 @@ export interface JobReport {
   contentHash: string;
   pulledAt: number;
   source: string;
-}
-
-/**
- * Extracts date from filename
- */
-function extractDateFromFileName(fileName: string): Date {
-  // YYYY-MM-DD format
-  const isoMatch = fileName.match(/(\d{4})-(\d{2})-(\d{2})/);
-  if (isoMatch) {
-    return new Date(`${isoMatch[1]}-${isoMatch[2]}-${isoMatch[3]}`);
-  }
-  
-  // DD-MM-YYYY format
-  const ddmmyyyyMatch = fileName.match(/(\d{2})-(\d{2})-(\d{4})/);
-  if (ddmmyyyyMatch) {
-    return new Date(`${ddmmyyyyMatch[3]}-${ddmmyyyyMatch[2]}-${ddmmyyyyMatch[1]}`);
-  }
-  
-  // Fallback to pulledAt
-  return new Date();
+  reportDate?: number;
+  githubSha?: string;
 }
 
 /**
  * Generates slug from fileName
  */
 function generateSlug(fileName: string): string {
-  return fileName.replace(/\.md$/, '');
+  const baseName = fileName.includes('/') ? fileName.split('/').pop()! : fileName;
+  return baseName.replace(/\.md$/, '');
 }
 
 /**
@@ -51,10 +35,14 @@ function determineReportType(fileName: string): 'daily' | 'uk-wide' {
 }
 
 /**
- * Maps a JobReport from Convex to the Report type expected by the frontend
+ * Maps a JobReport from Convex to the Report type expected by the frontend.
+ * Date resolution order: reportDate field from DB → filename parsing → pulledAt.
  */
 export function mapJobReportToReport(jobReport: JobReport, isLatest: boolean = false): Report {
-  const date = extractDateFromFileName(jobReport.fileName);
+  const date =
+    (jobReport.reportDate ? new Date(jobReport.reportDate) : null) ??
+    extractReportDate(jobReport.fileName) ??
+    new Date(jobReport.pulledAt);
   const slug = generateSlug(jobReport.fileName);
   const type = determineReportType(jobReport.fileName);
   const parsed = parseReport(jobReport.content, date);

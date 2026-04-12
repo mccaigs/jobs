@@ -1,6 +1,6 @@
 import { httpRouter } from "convex/server";
 import { httpAction } from "./_generated/server";
-import { api } from "./_generated/api";
+import { api, internal } from "./_generated/api";
 
 const http = httpRouter();
 
@@ -340,6 +340,30 @@ http.route({
       JSON.stringify({ ok: true, ingested: results.filter((r) => r.ok).length, results }),
       { status: 200, headers: { "Content-Type": "application/json" } }
     );
+  }),
+});
+
+/**
+ * POST /ingest/sync
+ * Manually triggers the GitHub ingestion action immediately.
+ * Useful when a new report has been pushed and you don't want to wait for the next cron.
+ */
+http.route({
+  path: "/ingest/sync",
+  method: "POST",
+  handler: httpAction(async (ctx) => {
+    try {
+      const result = await ctx.runAction(internal.githubIngest.ingestLatestJobReport, {});
+      return new Response(JSON.stringify({ ok: true, result }), {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      });
+    } catch (err) {
+      return new Response(JSON.stringify({ ok: false, error: String(err) }), {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
   }),
 });
 

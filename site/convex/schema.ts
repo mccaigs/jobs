@@ -40,8 +40,10 @@ export default defineSchema({
     pulledAt: v.number(),
     source: v.string(),
     githubSha: v.optional(v.string()),
+    reportDate: v.optional(v.number()),
   })
     .index("by_fileName", ["fileName"])
     .index("by_contentHash", ["contentHash"])
-    .index("by_pulledAt", ["pulledAt"]),
+    .index("by_pulledAt", ["pulledAt"])
+    .index("by_reportDate", ["reportDate"]),
 });

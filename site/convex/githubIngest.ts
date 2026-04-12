@@ -70,34 +70,43 @@ async function fetchFileContent(filePath: string): Promise<string> {
 }
 
 /**
- * Determines if a file is a job report based on naming patterns
+ * Determines if a file is a job report based on naming patterns.
+ * Strips any leading directory path before matching so files in subdirectories
+ * (e.g. "reports/01-04-2026-jobs.md") are still recognised correctly.
  */
-function isJobReport(fileName: string): boolean {
+function isJobReport(filePath: string): boolean {
+  const baseName = filePath.includes('/') ? filePath.split('/').pop()! : filePath;
   const patterns = [
     /^\d{4}-\d{2}-\d{2}-jobs\.md$/,           // YYYY-MM-DD-jobs.md
     /^\d{2}-\d{2}-\d{4}-jobs\.md$/,           // DD-MM-YYYY-jobs.md
     /^UK-AI-DailyJobSearch-.*\.md$/,          // UK-AI-DailyJobSearch-*.md
   ];
-  
-  return patterns.some(pattern => pattern.test(fileName));
+  return patterns.some(pattern => pattern.test(baseName));
 }
 
 /**
- * Extracts date from filename for sorting
+ * Extracts date from filename for sorting.
+ * Tests DD-MM-YYYY before YYYY-MM-DD to avoid ambiguous partial matches
+ * (e.g. "01-04-2026" must not be parsed as year=0104 month=20 day=26).
+ * Uses non-digit boundary anchors to avoid matching inside longer digit runs.
  */
-function extractDateFromFileName(fileName: string): Date | null {
-  // YYYY-MM-DD format
-  const isoMatch = fileName.match(/(\d{4})-(\d{2})-(\d{2})/);
-  if (isoMatch) {
-    return new Date(`${isoMatch[1]}-${isoMatch[2]}-${isoMatch[3]}`);
-  }
-  
-  // DD-MM-YYYY format
-  const ddmmyyyyMatch = fileName.match(/(\d{2})-(\d{2})-(\d{4})/);
+function extractDateFromFileName(filePath: string): Date | null {
+  const baseName = filePath.includes('/') ? filePath.split('/').pop()! : filePath;
+
+  // DD-MM-YYYY: e.g. 01-04-2026, 25-03-2026
+  const ddmmyyyyMatch = baseName.match(/(?:^|[^0-9])(\d{2})-(\d{2})-(\d{4})(?:[^0-9]|$)/);
   if (ddmmyyyyMatch) {
-    return new Date(`${ddmmyyyyMatch[3]}-${ddmmyyyyMatch[2]}-${ddmmyyyyMatch[1]}`);
+    const d = new Date(`${ddmmyyyyMatch[3]}-${ddmmyyyyMatch[2]}-${ddmmyyyyMatch[1]}`);
+    if (!isNaN(d.getTime())) return d;
   }
-  
+
+  // YYYY-MM-DD: e.g. 2026-03-23
+  const isoMatch = baseName.match(/(?:^|[^0-9])(\d{4})-(\d{2})-(\d{2})(?:[^0-9]|$)/);
+  if (isoMatch) {
+    const d = new Date(`${isoMatch[1]}-${isoMatch[2]}-${isoMatch[3]}`);
+    if (!isNaN(d.getTime())) return d;
+  }
+
   return null;
 }
 
@@ -221,6 +230,7 @@ export const ingestLatestJobReport = action({
 
           if (file.kind === "new") {
             const fileUrl = `${GITHUB_RAW}/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${file.path}`;
+            const reportDateMs = extractDateFromFileName(file.path)?.getTime() ?? now;
             const result = await ctx.runMutation(internal.jobReportsMutations.storeJobReport, {
               fileName: file.path,
               fileUrl,
@@ -229,6 +239,7 @@ export const ingestLatestJobReport = action({
               pulledAt: now,
               source: "github",
               githubSha: file.sha,
+              reportDate: reportDateMs,
             });
             if (result.inserted) {
               console.log(`✅ Inserted new: ${file.path}`);
@@ -238,12 +249,14 @@ export const ingestLatestJobReport = action({
             }
           } else {
             // CHANGED: patch the existing row
+            const reportDateMs = extractDateFromFileName(file.path)?.getTime() ?? now;
             await ctx.runMutation(internal.jobReportsMutations.updateJobReport, {
               id: file.existingId,
               content,
               contentHash,
               pulledAt: now,
               githubSha: file.sha,
+              reportDate: reportDateMs,
             });
             console.log(`🔄 Updated changed: ${file.path}`);
             updated++;

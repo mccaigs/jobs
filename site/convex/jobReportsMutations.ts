@@ -32,6 +32,7 @@ export const storeJobReport = internalMutation({
     pulledAt: v.number(),
     source: v.string(),
     githubSha: v.optional(v.string()),
+    reportDate: v.optional(v.number()),
   },
   handler: async (ctx, args) => {
     // Safety net: skip if identical content already exists anywhere
@@ -75,6 +76,7 @@ export const updateJobReport = internalMutation({
     contentHash: v.string(),
     pulledAt: v.number(),
     githubSha: v.optional(v.string()),
+    reportDate: v.optional(v.number()),
   },
   handler: async (ctx, args) => {
     const { id, ...patch } = args;
