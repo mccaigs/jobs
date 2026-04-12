@@ -20,8 +20,7 @@ build/
 .vercel/
 **/.vercel/
 
-# Logs
-logs
+# Logs - track logs/logs.md but ignore .log files
 *.log
 npm-debug.log*
 yarn-debug.log*
