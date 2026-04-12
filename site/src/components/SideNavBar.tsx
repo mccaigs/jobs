@@ -20,10 +20,10 @@ function IconRepo() {
 export function SideNavBar({ reports, activeReportId, onSelectReport, isLoading = false }: SideNavBarProps) {
   return (
     <aside
-      className="hidden lg:flex flex-col px-5 py-8 sticky shrink-0 w-60"
+      className="hidden lg:flex flex-col px-5 py-8 sticky shrink-0 w-56 xl:w-60"
       style={{
-        top: '49px',
-        height: 'calc(100vh - 49px)',
+        top: '53px',
+        height: 'calc(100vh - 53px)',
         borderRight: '1px solid rgba(255,255,255,0.04)',
       }}
     >

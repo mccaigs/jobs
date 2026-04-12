@@ -39,6 +39,7 @@ export default defineSchema({
     contentHash: v.string(),
     pulledAt: v.number(),
     source: v.string(),
+    githubSha: v.optional(v.string()),
   })
     .index("by_fileName", ["fileName"])
     .index("by_contentHash", ["contentHash"])

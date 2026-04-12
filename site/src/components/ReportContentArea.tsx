@@ -3,13 +3,17 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import type { Report } from '../types/report';
 import { getReportSourceUrl } from '../services/convexReports';
+import { normaliseContent } from '../utils/contentNormalise';
+import { MobileReportSwitcher } from './MobileReportSwitcher';
 
 interface ReportContentAreaProps {
   report: Report | null;
+  reports?: Report[];
+  onSelectReport?: (slug: string) => void;
   isLoading?: boolean;
 }
 
-export function ReportContentArea({ report, isLoading = false }: ReportContentAreaProps) {
+export function ReportContentArea({ report, reports = [], onSelectReport, isLoading = false }: ReportContentAreaProps) {
   const [displayReport, setDisplayReport] = useState<Report | null>(report);
   const [visible, setVisible] = useState(true);
   const pendingReport = useRef<Report | null>(null);
@@ -69,9 +73,17 @@ export function ReportContentArea({ report, isLoading = false }: ReportContentAr
 
   return (
     <div style={containerStyle}>
-      <article className="mt-10">
+      {/* Mobile-only report switcher – desktop uses the sidebar */}
+      <MobileReportSwitcher
+        reports={reports}
+        currentReport={displayReport}
+        onSelectReport={onSelectReport ?? (() => {})}
+        isLoading={isLoading}
+      />
+
+      <article className="overflow-x-hidden">
         {/* Report header */}
-        <header className="mb-8 pb-6" style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+        <header className="mb-6 sm:mb-8 pb-5 sm:pb-6" style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-3">
               <span className="font-manrope text-[10px] uppercase tracking-[0.15em] text-stone-600">
@@ -94,7 +106,7 @@ export function ReportContentArea({ report, isLoading = false }: ReportContentAr
           </div>
           <h2
             className="font-newsreader italic text-white leading-tight mb-2"
-            style={{ fontSize: '1.9rem', letterSpacing: '-0.015em' }}
+            style={{ fontSize: 'clamp(1.4rem, 4vw, 1.9rem)', letterSpacing: '-0.015em' }}
           >
             {displayReport.displayLabel ?? displayReport.title}
           </h2>
@@ -231,7 +243,7 @@ export function ReportContentArea({ report, isLoading = false }: ReportContentAr
               ),
             }}
           >
-            {displayReport.content}
+            {normaliseContent(displayReport.content)}
           </ReactMarkdown>
         </div>
       </article>

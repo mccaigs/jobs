@@ -97,36 +97,47 @@ function IntelligencePage() {
         />
 
         {/* Main content canvas */}
-        <section className="flex-1 px-10 py-8 min-w-0">
+        <section className="flex-1 px-4 sm:px-6 lg:px-10 py-6 sm:py-8 min-w-0 overflow-x-hidden">
 
           {/* Masthead row: title + signal card */}
-          <div className="grid grid-cols-12 gap-x-12 mb-10">
+          <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-x-12 mb-8 sm:mb-10">
             <HeroPanel report={currentReport} isLoading={isLoading} />
             <MarketSignalCard report={currentReport} isLoading={isLoading} />
           </div>
 
           {/* Content + right rail */}
-          <div className="grid grid-cols-12 gap-x-12">
+          <div className="flex flex-col xl:grid xl:grid-cols-12 xl:gap-x-12">
             {/* Main column */}
-            <div className="col-span-12 xl:col-span-8 space-y-10">
+            <div className="xl:col-span-8 space-y-8 sm:space-y-10 min-w-0">
               <TopMatchesList report={currentReport} isLoading={isLoading} />
-              <ReportContentArea report={currentReport} isLoading={isLoading} />
+              <ReportContentArea
+                report={currentReport}
+                reports={reports}
+                onSelectReport={handleSelectReport}
+                isLoading={isLoading}
+              />
 
               {/* Debug panel */}
-              <div className="pt-6 flex flex-wrap gap-x-6 gap-y-1 font-manrope text-[10px] text-stone-700" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+              <div className="pt-6 flex flex-wrap gap-x-4 gap-y-1 font-manrope text-[10px] text-stone-700" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
                 <span>Reports: <strong className="text-stone-600">{reports.length}</strong></span>
                 <span>Source: <strong className="text-stone-600">jobReports (cron)</strong></span>
                 {lastPulled && (
                   <span>Last pulled: <strong className="text-stone-600">{new Date(lastPulled).toLocaleString('en-GB')}</strong></span>
                 )}
                 {currentReport && (
-                  <span>Viewing: <strong className="text-stone-600">{currentReport.slug}</strong></span>
+                  <span>Slug: <strong className="text-stone-600">{currentReport.slug}</strong></span>
+                )}
+                {rawJobReports && (
+                  <span>In Convex: <strong className="text-stone-600">{rawJobReports.length}</strong></span>
+                )}
+                {currentReport?.parsed?.topMatches && (
+                  <span>Jobs rendered: <strong className="text-stone-600">{currentReport.parsed.topMatches.length}</strong></span>
                 )}
               </div>
             </div>
 
             {/* Right rail */}
-            <div className="hidden xl:block xl:col-span-4">
+            <div className="hidden xl:block xl:col-span-4 mt-8 xl:mt-0">
               <div className="sticky" style={{ top: '65px' }}>
                 <ReportIndexRail
                   reports={reports}

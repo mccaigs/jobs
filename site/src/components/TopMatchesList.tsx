@@ -43,19 +43,19 @@ function MatchItem({ match }: { match: JobMatch; index: number }) {
 
   return (
     <div
-      className="group flex items-center justify-between py-3.5 transition-colors duration-150 cursor-default"
+      className="group flex flex-wrap sm:flex-nowrap items-start sm:items-center justify-between py-3.5 gap-y-1 transition-colors duration-150 cursor-default"
       style={{ borderBottom: '1px solid rgba(255,255,255,0.04)' }}
     >
-      <div className="flex-1 min-w-0 pr-6">
-        <div className="font-manrope text-sm text-stone-200 mb-0.5 truncate">
+      <div className="flex-1 min-w-0 pr-3 sm:pr-6">
+        <div className="font-manrope text-sm text-stone-200 mb-0.5 wrap-break-word">
           {match.title}
         </div>
         <div className="font-manrope text-xs text-stone-600">
-          {match.company}{match.region ? ` · ${match.region}` : ''}
+          {match.company}{match.region ? ` - ${match.region}` : ''}
         </div>
       </div>
 
-      <div className="flex items-center gap-6 shrink-0">
+      <div className="flex items-center gap-4 sm:gap-6 shrink-0">
         <span className="font-manrope font-semibold text-sm tabular-nums" style={{ color: scoreColor }}>
           {match.fitScore}%
         </span>
@@ -106,7 +106,7 @@ export function TopMatchesList({ report, isLoading = false }: TopMatchesListProp
   const displayMatches = hasRealMatches ? matches : [];
 
   return (
-    <div className="col-span-12 xl:col-span-8">
+    <div>
       <div className="flex justify-between items-baseline mb-1">
         <h2 className="font-newsreader text-2xl italic text-white">
           Top Matches

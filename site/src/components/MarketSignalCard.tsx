@@ -29,8 +29,8 @@ export function MarketSignalCard({ report, isLoading = false }: MarketSignalCard
 
   return (
     <div
-      className="col-span-12 lg:col-span-4 pt-1 pb-6 flex flex-col justify-between"
-      style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}
+      className="lg:col-span-4 pt-5 lg:pt-1 pb-5 lg:pb-6 flex flex-col justify-between"
+      style={{ borderBottom: '1px solid rgba(255,255,255,0.05)', borderTop: 'none' }}
     >
       {isLoading ? (
         <div className="animate-pulse space-y-3">
@@ -59,7 +59,7 @@ export function MarketSignalCard({ report, isLoading = false }: MarketSignalCard
             ) : (
               <>
                 <div className="font-newsreader text-3xl italic mb-0.5" style={{ color: '#2e2b28' }}>
-                  —
+                  -
                 </div>
                 <p className="font-manrope text-stone-700 text-xs">
                   No fit score in this report
@@ -72,7 +72,7 @@ export function MarketSignalCard({ report, isLoading = false }: MarketSignalCard
             <div className="space-y-1">
               <div className="flex justify-between font-manrope text-[10px] text-stone-600">
                 <span>Scanned</span>
-                <span className="text-stone-400">{totalScanned > 0 ? totalScanned : '—'}</span>
+                <span className="text-stone-400">{totalScanned > 0 ? totalScanned : '-'}</span>
               </div>
               <ProgressBar value={scannedPct} color="#c8863a" />
             </div>
@@ -80,7 +80,7 @@ export function MarketSignalCard({ report, isLoading = false }: MarketSignalCard
             <div className="space-y-1">
               <div className="flex justify-between font-manrope text-[10px] text-stone-600">
                 <span>High-fit</span>
-                <span className="text-stone-400">{highFitCount > 0 ? highFitCount : '—'}</span>
+                <span className="text-stone-400">{highFitCount > 0 ? highFitCount : '-'}</span>
               </div>
               <ProgressBar
                 value={highFitCount > 0 && totalScanned > 0 ? (highFitCount / totalScanned) * 100 : 0}

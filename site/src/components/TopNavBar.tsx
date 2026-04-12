@@ -15,7 +15,7 @@ export function TopNavBar({ isLoading = false }: TopNavBarProps) {
         borderColor: 'rgba(255,255,255,0.05)',
       }}
     >
-      <div className="flex justify-between items-center px-8 py-3.5 w-full max-w-[1440px] mx-auto">
+      <div className="flex justify-between items-center px-4 sm:px-8 py-3.5 w-full max-w-[1440px] mx-auto">
         <div className="flex items-center gap-10">
           <Link to="/" className="font-newsreader italic text-lg tracking-tight" style={{ color: '#d4a574' }}>
             AI Jobs

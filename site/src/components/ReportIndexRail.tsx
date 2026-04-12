@@ -41,7 +41,7 @@ export function ReportIndexRail({
   const activeReport = reports.find(r => r.id === activeReportId) ?? reports[0] ?? null;
 
   return (
-    <div className="col-span-12 xl:col-span-4 space-y-8">
+    <div className="space-y-8">
 
       {/* ── CURRENT SCAN ── */}
       {(isLoading || activeReport) && (

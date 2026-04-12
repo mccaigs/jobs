@@ -74,12 +74,22 @@ export function mapJobReportToReport(jobReport: JobReport, isLatest: boolean = f
 }
 
 /**
- * Maps multiple JobReports to Report array
+ * Maps multiple JobReports to Report array sorted by file date descending.
+ * isLatest is set on the report with the newest file date, not the most
+ * recently pulled one, so the default selection is always the newest report.
  */
 export function mapJobReportsToReports(jobReports: JobReport[]): Report[] {
   if (!jobReports || jobReports.length === 0) return [];
-  
-  return jobReports.map((jr, index) => 
-    mapJobReportToReport(jr, index === 0)
-  );
+
+  const mapped = jobReports.map((jr) => mapJobReportToReport(jr, false));
+
+  // Sort by report date descending (newest file first)
+  mapped.sort((a, b) => b.date.getTime() - a.date.getTime());
+
+  // Mark only the first entry (newest by date) as latest
+  if (mapped.length > 0) {
+    mapped[0] = { ...mapped[0], isLatest: true };
+  }
+
+  return mapped;
 }

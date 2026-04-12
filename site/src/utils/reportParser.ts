@@ -81,8 +81,8 @@ function parseJobMatchesFromMarkdown(content: string): JobMatch[] {
   if (matches.length >= 3) return matches.slice(0, 6);
 
   // Strategy 2: look for numbered/bulleted job listings with score patterns
-  // e.g. "## 1. Senior AI Engineer at Acme Corp — 92%"
-  const sectionPattern = /#{1,3}\s*\d*\.?\s*(.+?)\s+(?:at|@|—|-)\s+(.+?)\s*[—\-–]\s*(\d{2,3})%/g;
+  // e.g. "## 1. Senior AI Engineer at Acme Corp - 92%"
+  const sectionPattern = /#{1,3}\s*\d*\.?\s*(.+?)\s+(?:at|@|[-\u2014\u2013])\s+(.+?)\s*[-\u2014\u2013]\s*(\d{2,3})%/g;
   let secMatch;
   while ((secMatch = sectionPattern.exec(content)) !== null) {
     const [, title, company, score] = secMatch;
@@ -104,7 +104,7 @@ function parseJobMatchesFromMarkdown(content: string): JobMatch[] {
 
   // Strategy 3: look for bold job titles followed by score on same/next line
   // **Senior AI Engineer** - 88%
-  const boldPattern = /\*\*([^*]+)\*\*[^*\n]*?(?:at|@|–|-)\s*([^*\n]+?)(?:\n|[—\-–])\s*(?:FIT|Fit|fit|Score|score)?[:\s]*(\d{2,3})%/g;
+  const boldPattern = /\*\*([^*]+)\*\*[^*\n]*?(?:at|@|[-\u2013\u2014])\s*([^*\n]+?)(?:\n|[-\u2014\u2013])\s*(?:FIT|Fit|fit|Score|score)?[:\s]*(\d{2,3})%/g;
   let boldMatch;
   while ((boldMatch = boldPattern.exec(content)) !== null) {
     const [, title, company, score] = boldMatch;
@@ -132,7 +132,7 @@ export function parseReport(content: string, date: Date): ParsedReport {
   const titleLine = lines.find(l => l.startsWith('# '));
   const title = titleLine
     ? titleLine.replace(/^#\s+/, '').trim()
-    : `AI Jobs Report — ${date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}`;
+    : `AI Jobs Report - ${date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}`;
 
   // Region
   const isEdinburgh = /edinburgh/i.test(content);

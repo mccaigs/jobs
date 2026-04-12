@@ -54,7 +54,7 @@ export function LeftRail({ reports, activeReportId, onSelectReport, isLoading = 
             text-sm font-manrope leading-snug
             ${isActive ? 'text-on_surface font-medium' : 'text-on_surface_variant'}
           `}>
-            AI Jobs — Edinburgh
+            AI Jobs - Edinburgh
           </div>
           
           {/* Active indicator */}

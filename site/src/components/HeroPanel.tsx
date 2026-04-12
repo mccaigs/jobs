@@ -13,7 +13,7 @@ export function HeroPanel({ report, isLoading = false }: HeroPanelProps) {
   const summary = report?.parsed?.summary;
 
   return (
-    <div className="col-span-12 lg:col-span-8 pt-1 pb-6" style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+    <div className="lg:col-span-8 pt-1 pb-5 lg:pb-6" style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
       {isLoading ? (
         <div className="animate-pulse space-y-3">
           <div className="h-9 bg-stone-800/50 rounded w-2/3" />
@@ -23,7 +23,7 @@ export function HeroPanel({ report, isLoading = false }: HeroPanelProps) {
         <>
           <h1
             className="font-newsreader italic text-white mb-2"
-            style={{ fontSize: '2.4rem', lineHeight: 1.08, letterSpacing: '-0.02em' }}
+            style={{ fontSize: 'clamp(1.7rem, 5vw, 2.4rem)', lineHeight: 1.08, letterSpacing: '-0.02em' }}
           >
             AI Market Intelligence
           </h1>
